@@ -1,10 +1,10 @@
-# Checklist 8 — Khung xử phạt tham khảo
+# Checklist 8: Khung xử phạt tham khảo
 
 Dùng để nêu mức độ rủi ro trong báo cáo. Không dùng để khẳng định một site cụ thể sẽ bị phạt bao nhiêu: mức phạt thực tế phụ thuộc tình tiết, chủ thể (cá nhân hay tổ chức) và văn bản có hiệu lực tại thời điểm vi phạm.
 
 ## Bảo vệ dữ liệu cá nhân
 
-**Mức trần theo Luật — Điều 8 Luật 91/2025/QH15** ([hethongphapluat](https://hethongphapluat.com/luat-bao-ve-du-lieu-ca-nhan-2025/dieu-8)):
+**Mức trần theo Luật: Điều 8 Luật 91/2025/QH15** ([hethongphapluat](https://hethongphapluat.com/luat-bao-ve-du-lieu-ca-nhan-2025/dieu-8)):
 
 | Hành vi | Mức phạt tối đa với tổ chức | Căn cứ |
 |---|---|---|
@@ -19,9 +19,9 @@ Dùng để nêu mức độ rủi ro trong báo cáo. Không dùng để khẳn
 
 | Hành vi | Mức phạt |
 |---|---|
-| Xử lý dữ liệu không có sự đồng ý | 30–50 triệu đồng |
-| Coi im lặng là đồng ý, hoặc tiếp tục xử lý khi đã được yêu cầu dừng | 50–70 triệu đồng |
-| Sử dụng dữ liệu cá nhân của người khác trái phép | 40–60 triệu đồng |
+| Xử lý dữ liệu không có sự đồng ý | 30-50 triệu đồng |
+| Coi im lặng là đồng ý, hoặc tiếp tục xử lý khi đã được yêu cầu dừng | 50-70 triệu đồng |
+| Sử dụng dữ liệu cá nhân của người khác trái phép | 40-60 triệu đồng |
 
 ## An ninh mạng
 NĐ 330/2026/NĐ-CP cũng quy định xử phạt trong lĩnh vực an ninh mạng. Mức cụ thể cho từng hành vi: CHƯA XÁC MINH.

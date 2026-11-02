@@ -2,20 +2,20 @@
 
 Có 2 mẫu. Chọn theo mức ở bước triage (`references/00-triage.md`):
 
-- **Mẫu A — rút gọn**: site mức 0–1 (tĩnh, hoặc chỉ có form liên hệ/analytics/chatbot).
-- **Mẫu B — đầy đủ**: site mức 2–3 (bán hàng, nền tảng).
+- **Mẫu A: rút gọn**: site mức 0-1 (tĩnh, hoặc chỉ có form liên hệ/analytics/chatbot).
+- **Mẫu B: đầy đủ**: site mức 2-3 (bán hàng, nền tảng).
 
 Ở cả 2 mẫu, chỉ liệt kê lĩnh vực có áp dụng. Các lĩnh vực không áp dụng gom vào 1 dòng, không kẻ bảng ⚪.
 
 ---
 
-## Mẫu A — rút gọn (site mức 0–1)
+## Mẫu A: rút gọn (site mức 0-1)
 
 ### Ví dụ mức 0: blog cá nhân tĩnh
 
-> **Rà soát pháp lý — minh.dev** (02/11/2026)
+> **Rà soát pháp lý: minh.dev** (02/11/2026)
 >
-> **Kết quả quét:** mức 0 — site tĩnh. Không có form, không có script theo dõi, không bán hàng, không có tài khoản người dùng, không có chatbot.
+> **Kết quả quét:** mức 0, site tĩnh. Không có form, không có script theo dõi, không bán hàng, không có tài khoản người dùng, không có chatbot.
 >
 > **Kết luận:** site không thu thập dữ liệu cá nhân và không kinh doanh, nên theo khung pháp luật hiện hành không phát sinh nghĩa vụ đáng kể về dữ liệu cá nhân, TMĐT, an ninh mạng hay bảo vệ người tiêu dùng. Không cần audit chi tiết.
 >
@@ -25,11 +25,11 @@ Có 2 mẫu. Chọn theo mức ở bước triage (`references/00-triage.md`):
 
 ### Ví dụ mức 1: landing page có form liên hệ và Google Analytics
 
-> **Rà soát pháp lý — studio-an.vn** (02/11/2026)
+> **Rà soát pháp lý: studio-an.vn** (02/11/2026)
 >
-> **Kết quả quét:** mức 1 — có form liên hệ (`index.html:14`, gửi qua Formspree) và Google Analytics (`index.html:5`). Không bán hàng, không có tài khoản người dùng.
+> **Kết quả quét:** mức 1. Có form liên hệ (`index.html:14`, gửi qua Formspree) và Google Analytics (`index.html:5`). Không bán hàng, không có tài khoản người dùng.
 >
-> **Áp dụng:** Bảo vệ dữ liệu cá nhân — mục A, B, C (`references/01-personal-data-protection.md`).
+> **Áp dụng:** Bảo vệ dữ liệu cá nhân, mục A, B, C (`references/01-personal-data-protection.md`).
 >
 > | Mức | Mục | Phát hiện | Căn cứ | Đề xuất |
 > |---|---|---|---|---|
@@ -43,12 +43,12 @@ Có 2 mẫu. Chọn theo mức ở bước triage (`references/00-triage.md`):
 
 ---
 
-## Mẫu B — đầy đủ (site mức 2–3)
+## Mẫu B: đầy đủ (site mức 2-3)
 
-### Rà soát pháp lý — [Tên website]
+### Rà soát pháp lý: [Tên website]
 
 **Ngày audit:** [ngày]
-**Kết quả quét:** mức [2/3] — [tóm tắt tín hiệu kèm file:dòng, ví dụ: giỏ hàng ở `pages/product.html:7`, cổng VNPay ở `checkout.js:2`]
+**Kết quả quét:** mức [2/3]. [tóm tắt tín hiệu kèm file:dòng, ví dụ: giỏ hàng ở `pages/product.html:7`, cổng VNPay ở `checkout.js:2`]
 **Phạm vi rà soát:** [chỉ liệt kê checklist có áp dụng]
 
 #### Tổng quan
@@ -62,10 +62,10 @@ Chỉ ghi các lĩnh vực có áp dụng.
 | Bảo vệ người tiêu dùng | | | |
 | [lĩnh vực khác nếu áp dụng] | | | |
 
-**Không áp dụng:** [gom 1 dòng kèm lý do, ví dụ: "Minh bạch AI — không có chatbot hay nội dung AI"]
+**Không áp dụng:** [gom 1 dòng kèm lý do, ví dụ: "Minh bạch AI: không có chatbot hay nội dung AI"]
 
 #### 🔴 Cần xử lý ngay
-- **[Mục checklist]** — [vấn đề, kèm file:dòng hoặc URL trang] — Căn cứ: [số hiệu văn bản, Điều/khoản nếu có] — Đề xuất: [việc cụ thể cần làm]
+- **[Mục checklist]**: [vấn đề, kèm file:dòng hoặc URL trang]. Căn cứ: [số hiệu văn bản, Điều/khoản nếu có]. Đề xuất: [việc cụ thể cần làm]
 
 #### 🟡 Nên cải thiện
 - ...
@@ -78,4 +78,4 @@ Chỉ ghi các lĩnh vực có áp dụng.
 
 #### Giới hạn & khuyến nghị
 
-> Báo cáo này do AI tạo dựa trên bộ checklist tổng hợp từ văn bản pháp luật công khai, **không phải ý kiến tư vấn pháp lý chính thức**. Khung pháp lý Việt Nam về dữ liệu cá nhân, TMĐT và an ninh mạng vừa thay đổi lớn trong 2025–2026. Trước khi quyết định, hãy xác minh lại từng văn bản tại thuvienphapluat.vn/vbpl.vn và tham vấn luật sư.
+> Báo cáo này do AI tạo dựa trên bộ checklist tổng hợp từ văn bản pháp luật công khai, **không phải ý kiến tư vấn pháp lý chính thức**. Khung pháp lý Việt Nam về dữ liệu cá nhân, TMĐT và an ninh mạng vừa thay đổi lớn trong 2025-2026. Trước khi quyết định, hãy xác minh lại từng văn bản tại thuvienphapluat.vn/vbpl.vn và tham vấn luật sư.

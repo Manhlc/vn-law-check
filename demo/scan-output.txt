@@ -21,7 +21,7 @@ Quét: demo/site
           demo/site/api/subscribe.js:1:import { getFirestore, collection, addDoc } from 'firebase/firestore';
           demo/site/package.json:4:  "dependencies": { "firebase": "10.12.0", "next-auth": "5.0.0" }
 
-Gợi ý: mức 2 — Bán hàng/TMĐT — 01 + 02 + 04 (thêm 05/06 nếu có quảng cáo, hợp đồng điện tử)
+Gợi ý: mức 2, bán hàng/TMĐT. Áp dụng 01 + 02 + 04 (thêm 05/06 nếu có quảng cáo, hợp đồng điện tử)
         + có dấu hiệu AI → thêm 07-ai-transparency
         + có dấu hiệu host/dịch vụ nước ngoài → xem 01 mục D nếu có lưu dữ liệu cá nhân
 

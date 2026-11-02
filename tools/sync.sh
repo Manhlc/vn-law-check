@@ -53,7 +53,7 @@ if [ "${1:-}" = "--check" ]; then
   drift=0
   for p in "${GENERATED[@]}"; do
     if ! diff -r "$ROOT/$p" "$tmp/$p" > /dev/null 2>&1; then
-      echo "LỆCH: $p — chạy tools/sync.sh rồi commit lại"
+      echo "LỆCH: $p. Chạy tools/sync.sh rồi commit lại"
       drift=1
     fi
   done

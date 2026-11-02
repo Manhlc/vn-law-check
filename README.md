@@ -6,11 +6,11 @@ Checklist + rules cho AI coding agent audit sơ bộ pháp lý website Việt Na
 
 Ảnh trên chạy trên một [shop demo](demo/site/) cố ý chứa các lỗi thường gặp. Xem [báo cáo đầy đủ](demo/report.md): mỗi phát hiện có file:dòng và số điều luật.
 
-Không phải tư vấn pháp lý, xem [DISCLAIMER.md](./DISCLAIMER.md). Luật VN ở mảng này vừa đổi gần hết trong 2025–2026, nên tự xác minh lại trước khi dựa vào.
+Không phải tư vấn pháp lý, xem [DISCLAIMER.md](./DISCLAIMER.md). Luật VN ở mảng này vừa đổi gần hết trong 2025-2026, nên tự xác minh lại trước khi dựa vào.
 
 ### Cài nhanh
 
-Dùng Claude Code — cài qua plugin marketplace (gõ trong Claude Code, không phải terminal):
+Dùng Claude Code: cài qua plugin marketplace (gõ trong Claude Code, không phải terminal):
 
 ```
 /plugin marketplace add mhfed/vn-law-check
@@ -25,7 +25,7 @@ git clone --depth=1 https://github.com/mhfed/vn-law-check ~/.claude/skills/vn-la
 
 (muốn cài riêng cho 1 project thì đổi `~/.claude/skills/` thành `.claude/skills/` trong project đó)
 
-Dùng Cursor/Windsurf/Copilot/Cline/Codex — chạy trong thư mục project:
+Dùng Cursor/Windsurf/Copilot/Cline/Codex: chạy lệnh này trong thư mục project:
 
 ```bash
 curl -fsSL https://raw.githubusercontent.com/mhfed/vn-law-check/main/install.sh | bash
@@ -37,30 +37,30 @@ Xong thì bảo agent: "audit pháp lý website này theo luật Việt Nam". Ag
 
 ### Vì sao làm cái này
 
-Rules compliance có sẵn trên GitHub cho AI agent gần như toàn GDPR/CCPA. Chưa có cái nào theo luật Việt Nam — mà luật VN vừa thay gần hết: Luật Bảo vệ dữ liệu cá nhân 2025, Luật Thương mại điện tử 2025, Luật An ninh mạng 2025 đều mới có hiệu lực trong 2026, thay các nghị định cũ.
+Rules compliance có sẵn trên GitHub cho AI agent gần như toàn GDPR/CCPA. Chưa có cái nào theo luật Việt Nam, trong khi luật VN vừa thay gần hết: Luật Bảo vệ dữ liệu cá nhân 2025, Luật Thương mại điện tử 2025, Luật An ninh mạng 2025 đều mới có hiệu lực trong 2026, thay các nghị định cũ.
 
 ### Dùng với tool nào
 
 Cùng một nội dung, đặt ở nhiều file để mỗi tool tự đọc đúng chỗ của nó, không cần config gì thêm:
 
-- `AGENTS.md` — chuẩn chung (Cursor, Codex, Jules, Amp, Zed...)
-- `CLAUDE.md` — Claude
-- `SKILL.md` — Claude Skill, cho vào `.claude/skills/`
-- `.claude-plugin/marketplace.json` + `plugins/vn-law-check/` — để cài qua `/plugin marketplace add` trong Claude Code
-- `.cursor/rules/vn-legal-compliance.mdc` — Cursor
-- `.windsurfrules` — Windsurf
-- `.github/copilot-instructions.md` — GitHub Copilot
-- `.clinerules` — Cline
+- `AGENTS.md`: chuẩn chung (Cursor, Codex, Jules, Amp, Zed...)
+- `CLAUDE.md`: Claude
+- `SKILL.md`: Claude Skill, cho vào `.claude/skills/`
+- `.claude-plugin/marketplace.json` + `plugins/vn-law-check/`: để cài qua `/plugin marketplace add` trong Claude Code
+- `.cursor/rules/vn-legal-compliance.mdc`: Cursor
+- `.windsurfrules`: Windsurf
+- `.github/copilot-instructions.md`: GitHub Copilot
+- `.clinerules`: Cline
 
 ### Cấu trúc
 
 ```
 references/   00-triage (phân loại site trước khi audit) + 8 checklist theo lĩnh vực
-scripts/      scan.sh — quét source code, phát hiện form/tracking/giỏ hàng/đăng nhập/AI/hosting, gợi ý mức audit
+scripts/      scan.sh: quét source code, phát hiện form/tracking/giỏ hàng/đăng nhập/AI/hosting, gợi ý mức audit
 sources/      văn bản pháp luật dẫn chiếu, ngày hiệu lực, link
 examples/     mẫu báo cáo: rút gọn (site nhỏ) và đầy đủ (bán hàng, nền tảng)
 tests/        site mẫu để kiểm tra scan.sh phân loại đúng
-tools/        sync.sh — sinh các bản copy cho từng tool từ nguồn gốc
+tools/        sync.sh: sinh các bản copy cho từng tool từ nguồn gốc
 ```
 
 `scan.sh` chỉ đọc file local, không gửi gì ra ngoài.
@@ -73,7 +73,7 @@ Mỗi mục checklist có dẫn Điều/khoản. Số điều nào chưa đối 
 
 ### Đóng góp
 
-PR cập nhật văn bản, sửa sai sót đều được hoan nghênh — nhớ trích nguồn (số hiệu văn bản, link thuvienphapluat.vn/vbpl.vn) cho mỗi thay đổi.
+PR cập nhật văn bản, sửa sai sót đều được hoan nghênh. Nhớ trích nguồn (số hiệu văn bản, link thuvienphapluat.vn/vbpl.vn) cho mỗi thay đổi.
 
 Chỉ sửa file nguồn gốc: `AGENTS.md`, `SKILL.md`, `references/`, `sources/`, `examples/`, `scripts/`, `DISCLAIMER.md`. Sau đó chạy `tools/sync.sh` để sinh lại `CLAUDE.md`, rules cho Cursor/Windsurf/Copilot/Cline và bản trong `plugins/`. CI sẽ báo lỗi nếu quên đồng bộ. Sửa `scripts/scan.sh` thì chạy `tests/run.sh` để kiểm tra.
 

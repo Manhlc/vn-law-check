@@ -4,7 +4,7 @@
 #   scripts/scan.sh [thư-mục]      (mặc định: thư mục hiện tại)
 #
 # Script chỉ đọc file, không gửi gì ra ngoài. Kết quả là GỢI Ý kèm bằng chứng
-# (file:dòng) — agent vẫn phải xem lại bằng chứng trước khi kết luận.
+# (file:dòng). Agent vẫn phải xem lại bằng chứng trước khi kết luận.
 # Với site chỉ có URL: lưu HTML trang chủ và vài trang chính vào một thư mục rồi quét thư mục đó.
 
 set -uo pipefail
@@ -62,21 +62,21 @@ done
 
 # Gợi ý mức theo bảng trong references/00-triage.md
 if [ "${FOUND[AUTH]}" = 1 ] && [ "${FOUND[MARKETPLACE]}" = 1 ]; then
-  level=3; desc="Nền tảng/SaaS quy mô — áp dụng toàn bộ 01–08"
+  level=3; desc="nền tảng/SaaS quy mô. Áp dụng toàn bộ 01-08"
 elif [ "${FOUND[COMMERCE]}" = 1 ]; then
-  level=2; desc="Bán hàng/TMĐT — 01 + 02 + 04 (thêm 05/06 nếu có quảng cáo, hợp đồng điện tử)"
+  level=2; desc="bán hàng/TMĐT. Áp dụng 01 + 02 + 04 (thêm 05/06 nếu có quảng cáo, hợp đồng điện tử)"
 elif [ "${FOUND[FORM]}" = 1 ] || [ "${FOUND[TRACKING]}" = 1 ] || [ "${FOUND[AUTH]}" = 1 ] || [ "${FOUND[AI]}" = 1 ]; then
   # Chatbot AI nhận tin nhắn tự do của người dùng và gửi tới bên thứ ba → coi như có thu thập dữ liệu
-  level=1; desc="Thu thập nhẹ — 01 mục A, B, C"
+  level=1; desc="thu thập nhẹ. Áp dụng 01 mục A, B, C"
 else
-  level=0; desc="Tĩnh hoàn toàn — không cần audit chi tiết"
+  level=0; desc="tĩnh hoàn toàn. Không cần audit chi tiết"
 fi
 
 ai="no";   [ "${FOUND[AI]}" = 1 ] && ai="yes"
 host="no"; [ "${FOUND[FOREIGN_HOST]}" = 1 ] && host="yes"
 
 echo
-echo "Gợi ý: mức $level — $desc"
+echo "Gợi ý: mức $level, $desc"
 [ "$ai" = yes ]   && echo "        + có dấu hiệu AI → thêm 07-ai-transparency"
 # Site mức 0 không lưu dữ liệu cá nhân nên nhúng CDN/host nước ngoài không phát sinh nghĩa vụ chuyển dữ liệu
 [ "$host" = yes ] && [ "$level" -ge 1 ] && echo "        + có dấu hiệu host/dịch vụ nước ngoài → xem 01 mục D nếu có lưu dữ liệu cá nhân"
