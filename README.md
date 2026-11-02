@@ -1,6 +1,6 @@
 # vn-law-check
 
-**Code do AI viết thì để AI soi luật luôn.** Bảo agent "audit pháp lý site này", nó quét code rồi chỉ ra chỗ site đang dính luật Việt Nam: file nào, dòng nào, điều luật nào. Thấy lỗi thì bảo nó sửa tiếp.
+**Code do AI viết thì để AI soi luật luôn.** Bảo agent "audit pháp lý site này", nó quét code rồi chỉ ra chỗ site đang dính luật Việt Nam: file nào, dòng nào, điều luật nào. Thấy lỗi thì bảo nó sửa tiếp. Dùng được cho cả mobile app (React Native, Expo, Flutter, Android, iOS).
 
 Dùng với Claude Code, Cursor, Copilot, Windsurf, Cline. Theo luật mới 2025-2026: dữ liệu cá nhân, TMĐT, an ninh mạng, người tiêu dùng, quảng cáo, AI.
 
@@ -57,8 +57,9 @@ Cùng một nội dung, đặt ở nhiều file để mỗi tool tự đọc đ�
 ### Cấu trúc
 
 ```
-references/   00-triage (phân loại site trước khi audit) + 8 checklist theo lĩnh vực
-scripts/      scan.sh: quét source code hoặc URL, phát hiện form/tracking/giỏ hàng/đăng nhập/AI/hosting, gợi ý mức audit
+references/   00-triage (phân loại site trước khi audit) + 9 checklist theo lĩnh vực, gồm 1 checklist riêng cho mobile app
+scripts/      scan.sh: quét source code hoặc URL, phát hiện form/tracking/giỏ hàng/đăng nhập/AI/hosting,
+              và với mobile app: quyền truy cập, SDK tracking/quảng cáo, chức năng xóa tài khoản
               fetch-site.sh: tải trang công khai của một URL để scan.sh quét
 sources/      văn bản pháp luật dẫn chiếu, ngày hiệu lực, link
 examples/     mẫu báo cáo: rút gọn (site nhỏ) và đầy đủ (bán hàng, nền tảng)

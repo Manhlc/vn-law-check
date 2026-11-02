@@ -8,7 +8,7 @@ Nhiều số điều trong checklist lấy từ bản tóm tắt của công ty 
 | Văn bản | Ngày hiệu lực | Ghi chú | Link |
 |---|---|---|---|
 | Luật Bảo vệ dữ liệu cá nhân, số 91/2025/QH15 | 01/01/2026 | | [thuvienphapluat](https://thuvienphapluat.vn/van-ban/Bo-may-hanh-chinh/Luat-Bao-ve-du-lieu-ca-nhan-2025-so-91-2025-QH15-625628.aspx), [tra theo điều](https://hethongphapluat.com/luat-bao-ve-du-lieu-ca-nhan-2025.html) |
-| Nghị định 356/2025/NĐ-CP | 01/01/2026 | Thay thế NĐ 13/2023 | [tóm tắt EY](https://www.ey.com/vi_vn/technical/tax/tax-and-law-updates/nghi-dinh-so-356-2025-nd-cp-quy-dinh-chi-tiet-mot-so-dieu-va-bien-phap-thi-hanh-luat-bao-ve-du-lieu-ca-nhan) (chưa tìm được link toàn văn) |
+| Nghị định 356/2025/NĐ-CP | 01/01/2026 | Thay thế NĐ 13/2023 | [toàn văn](https://thuvienphapluat.vn/van-ban/Quyen-dan-su/Nghi-dinh-356-2025-ND-CP-huong-dan-Luat-Bao-ve-du-lieu-ca-nhan-687428.aspx), [tóm tắt EY](https://www.ey.com/vi_vn/technical/tax/tax-and-law-updates/nghi-dinh-so-356-2025-nd-cp-quy-dinh-chi-tiet-mot-so-dieu-va-bien-phap-thi-hanh-luat-bao-ve-du-lieu-ca-nhan) |
 | Nghị định 330/2026/NĐ-CP | 19/08/2026 | Xử phạt an ninh mạng + dữ liệu cá nhân | [GV Lawyers](https://gvlawyers.com.vn/wp-content/uploads/2026/08/VN_Legal-alert_-PDP-under-Decree-No.-330.2026-1.pdf), [PwC](https://www.pwc.com/vn/vn/publications/news-brief/260915-decree-330-pdpl-violations.html) |
 | Nghị định 13/2023/NĐ-CP | Hết hiệu lực 01/01/2026 | Chỉ để tham khảo lịch sử | |
 
@@ -53,8 +53,13 @@ Nhiều số điều trong checklist lấy từ bản tóm tắt của công ty 
 | Luật Trí tuệ nhân tạo, số 134/2025/QH15 | 01/03/2026 | Chuyển tiếp 12/18 tháng cho hệ thống đã vận hành (Điều 35) | [thuvienphapluat](https://thuvienphapluat.vn/van-ban/Cong-nghe-thong-tin/Luat-Tri-tue-nhan-tao-2025-so-134-2025-QH15-679013.aspx), [bản tiếng Anh](https://english.luatvietnam.vn/law-no-134-2025-qh15-dated-december-10-2025-of-the-national-assembly-on-artificial-intelligence-422299-doc1.html) |
 | Nghị định 142/2026/NĐ-CP | 01/05/2026 | Gắn nhãn nội dung AI ở Điều 18 | [lsvn](https://lsvn.vn/thong-bao-va-gan-nhan-nhan-biet-noi-dung-do-ai-tao-ra-the-nao-a172678.html) |
 
+## Mobile app
+| Văn bản | Ngày hiệu lực | Ghi chú | Link |
+|---|---|---|---|
+| Văn bản hợp nhất 08/VBHN-BCT | 03/02/2026 | Hợp nhất Thông tư 59/2015/TT-BCT về TMĐT qua ứng dụng di động. Còn hiệu lực sau 01/07/2026 hay không: CHƯA XÁC MINH | [luatvietnam](https://luatvietnam.vn/thuong-mai/van-ban-hop-nhat-08-vbhn-bct-2026-quan-ly-hoat-dong-thuong-mai-dien-tu-qua-ung-dung-di-dong-426039-d5.html), [TT 59/2015 gốc](https://vbpl.vn/FileData/TW/Lists/vbpq/Attachments/105747/VanBanGoc_59.2015.TT.BCT.pdf) |
+| Nghị định 147/2024/NĐ-CP | 25/12/2024 | Dịch vụ Internet, mạng xã hội, game. Thay NĐ 72/2013 | [tóm tắt](https://luatvietan.vn/nghi-dinh-147-2024-nd-cp-quan-ly-cung-cap-su-dung-dich-vu-internet-va-thong-tin-tren-mang.html), [chương game](https://hethongphapluat.com/nghi-dinh-147-2024-nd-cp-quan-ly-cung-cap-su-dung-dich-vu-internet-va-thong-tin-tren-mang/chuong-6) |
+
 ## Liên quan, chưa đưa vào checklist
 - Luật Dữ liệu: 60/2024/QH15
 - Luật Công nghiệp công nghệ số: 71/2025/QH15
-- Nghị định 147/2024/NĐ-CP: quản lý dịch vụ Internet và thông tin trên mạng
 - Nghị định 163/2024/NĐ-CP: hướng dẫn Luật Viễn thông

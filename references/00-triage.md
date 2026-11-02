@@ -30,6 +30,16 @@ Chỉ hỏi ngược lại người dùng khi quét xong vẫn không xác đị
 
 Bất kể mức nào ở trên: nếu có chatbot AI hoặc nội dung AI-generated, luôn thêm `07-ai-transparency.md`. Chatbot nhận tin nhắn tự do của người dùng rồi gửi sang bên thứ ba (OpenAI, Anthropic...) thì tính tối thiểu mức 1, vì người dùng có thể gõ thông tin cá nhân vào.
 
+## Mobile app
+
+`scan.sh` tự nhận ra mobile app (Flutter, React Native, Expo, Android, iOS) qua `pubspec.yaml`, `package.json`, `AndroidManifest.xml`, `Info.plist`. Với app, script liệt kê thêm:
+- **PERMISSIONS:** quyền app xin (vị trí, danh bạ, camera, micro, SMS...)
+- **SDK_TRACKING:** SDK analytics, attribution (Firebase Analytics, Facebook SDK, AppsFlyer...)
+- **ADS_SDK:** SDK quảng cáo (AdMob, AppLovin...)
+- **ACCOUNT_DELETE:** app có đăng nhập thì có chức năng xóa tài khoản không
+
+Mức độ xếp như website. App xin quyền truy cập hoặc có SDK tracking/quảng cáo thì tối thiểu là mức 1, vì đã thu dữ liệu cá nhân dù không có form nào. Luôn thêm `09-mobile-app.md` cho app.
+
 ## Quy mô chủ site
 
 Site của hộ kinh doanh hoặc doanh nghiệp siêu nhỏ được miễn một phần nghĩa vụ dữ liệu cá nhân theo Điều 39 Luật 91/2025 (Điều 39 không nhắc tới cá nhân; site cá nhân có thuộc diện điều chỉnh hay không: CHƯA XÁC MINH):

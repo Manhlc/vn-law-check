@@ -18,16 +18,23 @@ for dir in "$ROOT"/tests/fixtures/*/; do
     python3 -m http.server "$PORT" --directory "$dir" >/dev/null 2>&1 &
     server=$!
     sleep 1
-    got="$(bash "$ROOT/scripts/scan.sh" "http://localhost:$PORT/" | grep '^LEVEL=' | awk '{print $1, $2}')"
+    line="$(bash "$ROOT/scripts/scan.sh" "http://localhost:$PORT/" | grep '^LEVEL=')"
     kill "$server" 2>/dev/null
     wait "$server" 2>/dev/null
     mode="url"
   else
-    got="$(bash "$ROOT/scripts/scan.sh" "$dir" | grep '^LEVEL=' | awk '{print $1, $2}')"
+    line="$(bash "$ROOT/scripts/scan.sh" "$dir" | grep '^LEVEL=')"
     mode="dir"
   fi
 
-  if [ "$got" = "$expected" ]; then
+  # So từng giá trị ghi trong EXPECTED (ví dụ "LEVEL=1 AI=no APP=yes") với dòng kết quả
+  ok=1
+  for kv in $expected; do
+    case " $line " in *" $kv "*) ;; *) ok=0 ;; esac
+  done
+  got="$line"
+
+  if [ "$ok" = 1 ]; then
     echo "PASS  $name [$mode]  ($got)"
   else
     echo "FAIL  $name [$mode]  mong đợi: $expected  nhận được: $got"
