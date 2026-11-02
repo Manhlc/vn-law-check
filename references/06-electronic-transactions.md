@@ -1,20 +1,24 @@
 # Checklist 6 — Giao dịch điện tử / hợp đồng điện tử
 
 **Văn bản áp dụng:**
-- Luật Giao dịch điện tử 2023 (hiệu lực 01/07/2024)
-- Nghị định hướng dẫn chữ ký điện tử, dịch vụ tin cậy (kiểm tra số hiệu nghị định hướng dẫn hiện hành tại thời điểm audit)
-- Văn bản hợp nhất quản lý website TMĐT (phần quy chế chứng thực hợp đồng điện tử — xem checklist 02)
+- Luật Giao dịch điện tử 2023 — Luật số 20/2023/QH15, hiệu lực 01/07/2024 ([thuvienphapluat](https://thuvienphapluat.vn/van-ban/Thuong-mai/Law-20-2023-QH15-Electronic-Transactions-577937.aspx), [caselaw.vn](https://caselaw.vn/van-ban-phap-luat/411469-luat-giao-dich-dien-tu-so-20-2023-qh15-ngay-22-06-2023-cua-quoc-hoi))
+- Nghị định 23/2025/NĐ-CP — chữ ký điện tử và dịch vụ tin cậy, ban hành 21/02/2025, hiệu lực 10/04/2025 ([caselaw.vn](https://caselaw.vn/van-ban-phap-luat/411540-nghi-dinh-so-23-2025-nd-cp-ngay-21-02-2025-cua-chinh-phu-quy-dinh-ve-chu-ky-dien-tu-va-dich-vu-tin-cay))
 
-## A. Giá trị pháp lý của giao dịch điện tử trên website
-- [ ] Quy trình đặt hàng/ký hợp đồng online của website đảm bảo yếu tố: thông tin đề nghị giao kết rõ ràng, xác nhận chấp thuận rõ ràng (click "Đặt hàng"/"Xác nhận" coi là chấp thuận).
-- [ ] Hệ thống lưu trữ được bản ghi giao dịch điện tử (đơn hàng, thời điểm, nội dung) để làm chứng cứ khi có tranh chấp.
+## A. Giá trị pháp lý của giao dịch trên website
+- [ ] Quy trình đặt hàng/ký hợp đồng online có đề nghị giao kết rõ ràng và có bước chấp thuận rõ ràng (bấm "Đặt hàng", "Xác nhận"). Căn cứ: hợp đồng điện tử ở Điều 34–38, giá trị pháp lý của thông điệp dữ liệu ở Điều 8–12.
+- [ ] Hệ thống lưu được bản ghi giao dịch (đơn hàng, thời điểm, nội dung) để làm chứng cứ khi có tranh chấp.
 
-## B. Chữ ký điện tử (nếu website có chức năng ký hợp đồng/duyệt hồ sơ online)
-- [ ] Nếu dùng chữ ký điện tử cho hợp đồng có giá trị pháp lý cao (hợp đồng lao động điện tử, hợp đồng vay, hợp đồng dân sự giá trị lớn): xác định loại chữ ký điện tử đang dùng (chữ ký điện tử chuyên dùng/chữ ký số/chữ ký điện tử đơn giản) có đáp ứng yêu cầu pháp lý cho loại hợp đồng đó không.
+## B. Chữ ký điện tử (site có chức năng ký hợp đồng/duyệt hồ sơ online) — Điều 22, 23
+- [ ] Xác định loại chữ ký đang dùng theo Điều 22. Luật chia 3 loại:
+  - chữ ký điện tử chuyên dùng
+  - chữ ký số công cộng
+  - chữ ký số chuyên dùng công vụ
+- [ ] Loại chữ ký đó đủ giá trị pháp lý cho loại hợp đồng đang ký (Điều 23, chi tiết tại NĐ 23/2025). Cần chú ý với hợp đồng lao động điện tử, hợp đồng vay, hợp đồng giá trị lớn.
 
-## C. Dịch vụ chứng thực hợp đồng điện tử (nếu website đóng vai trò bên thứ ba chứng thực)
-- [ ] Đã đăng ký hoạt động cung cấp dịch vụ chứng thực hợp đồng điện tử với cơ quan có thẩm quyền.
-- [ ] Công khai quy chế hoạt động trên website: quyền và nghĩa vụ các bên, phương thức thực hiện dịch vụ, cơ chế giải quyết khiếu nại.
+## C. Dịch vụ tin cậy (site là bên thứ ba chứng thực) — Điều 28–33
+- [ ] Đáp ứng điều kiện kinh doanh dịch vụ tin cậy (Điều 29).
+- [ ] Nếu chứng thực thông điệp dữ liệu/hợp đồng điện tử: làm đúng Điều 32.
+- [ ] Công khai quy chế hoạt động trên website: quyền và nghĩa vụ các bên, cách thực hiện dịch vụ, cách giải quyết khiếu nại.
 
-## D. Lưu trữ hồ sơ điện tử
-- [ ] Hồ sơ/tài liệu điện tử liên quan giao dịch được lưu trữ đủ thời hạn theo quy định pháp luật chuyên ngành tương ứng (kế toán, thuế, lao động...).
+## D. Lưu trữ thông điệp dữ liệu — Điều 13
+- [ ] Hồ sơ, tài liệu điện tử của giao dịch được lưu theo Điều 13. Thời hạn lưu theo pháp luật chuyên ngành (kế toán, thuế, lao động...).

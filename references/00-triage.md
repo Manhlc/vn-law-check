@@ -2,7 +2,11 @@
 
 Làm bước này trước khi mở bất kỳ checklist nào. Mục tiêu: không áp đủ 8 checklist lên một trang blog cá nhân không có gì để audit, và không bỏ sót website thực sự có rủi ro.
 
-**Tự quét để xác định, không hỏi người dùng những câu này.** Đọc trực tiếp code/nội dung site (nếu có code: grep trong repo; nếu chỉ có URL: xem page source, view-source, tab Network/DOM) để tự trả lời:
+**Tự quét để xác định, không hỏi người dùng những câu này.**
+
+Có source code: chạy `bash scripts/scan.sh <thư-mục-code>`. Script in ra từng tín hiệu kèm bằng chứng (file:dòng) và gợi ý mức. Xem lại bằng chứng, vì script chỉ grep nên có thể bắt nhầm (ví dụ chữ "thanh toán" trong một bài blog). Chỉ có URL: lưu HTML trang chủ và vài trang chính (liên hệ, sản phẩm, chính sách) vào một thư mục tạm rồi chạy script trên thư mục đó, hoặc tự đọc page source.
+
+Các câu hỏi script đang trả lời (dùng để kiểm tra lại bằng tay khi cần):
 
 - Trang có form nào thu thập thông tin không (liên hệ, đăng ký, bình luận, newsletter)? → tìm thẻ `<form>`, input type email/tel, hoặc tích hợp form (Formspree, Google Form nhúng...).
 - Trang có gắn Google Analytics, Facebook Pixel, hay script theo dõi nào không? → grep `gtag`, `ga(`, `fbq(`, `analytics`, hoặc các domain tracking phổ biến trong HTML/JS.
@@ -22,7 +26,18 @@ Chỉ hỏi ngược lại người dùng khi quét xong vẫn không xác đị
 | 2 — Bán hàng/TMĐT | Có giỏ hàng, thanh toán, bán sản phẩm/dịch vụ | `01` (đầy đủ) + `02-ecommerce.md` + `04-consumer-protection.md`. Thêm `05-advertising.md` nếu có quảng cáo/KOL, `06-electronic-transactions.md` nếu có hợp đồng điện tử. |
 | 3 — Nền tảng/SaaS quy mô | Có tài khoản người dùng, xử lý dữ liệu lớn, hoặc là nền tảng cho bên thứ ba | Toàn bộ `01`–`08`. |
 
-Bất kể mức nào ở trên: nếu có chatbot AI hoặc nội dung AI-generated, luôn thêm `07-ai-transparency.md`.
+Bất kể mức nào ở trên: nếu có chatbot AI hoặc nội dung AI-generated, luôn thêm `07-ai-transparency.md`. Chatbot nhận tin nhắn tự do của người dùng rồi gửi sang bên thứ ba (OpenAI, Anthropic...) thì tính tối thiểu mức 1, vì người dùng có thể gõ thông tin cá nhân vào.
+
+## Quy mô chủ site
+
+Site của cá nhân, hộ kinh doanh hoặc doanh nghiệp siêu nhỏ được miễn một phần nghĩa vụ dữ liệu cá nhân theo Điều 39 Luật 91/2025:
+- miễn DPIA
+- miễn hồ sơ chuyển dữ liệu xuyên biên giới
+- miễn chỉ định nhân sự bảo vệ dữ liệu
+
+Không được miễn nếu xử lý dữ liệu nhạy cảm, xử lý số lượng lớn, hoặc kinh doanh dịch vụ xử lý dữ liệu. Xem đầu checklist 01.
+
+Đoán quy mô từ chính site (trang giới thiệu, footer, thông tin đăng ký kinh doanh). Không đoán được thì ghi rõ trong báo cáo là mục D, E checklist 01 "áp dụng nếu không thuộc diện miễn trừ Điều 39", thay vì dừng lại hỏi.
 
 ## Cách báo cáo cho site mức 0–1
 

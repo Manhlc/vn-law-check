@@ -21,13 +21,15 @@ git clone --depth=1 https://github.com/mhfed/vn-law-check ~/.claude/skills/vn-la
 
 (muốn cài riêng cho 1 project thì đổi `~/.claude/skills/` thành `.claude/skills/` trong project đó)
 
-Dùng Cursor/Windsurf/Copilot/Cline — copy rules vào project hiện tại:
+Dùng Cursor/Windsurf/Copilot/Cline/Codex — chạy trong thư mục project:
 
 ```bash
 curl -fsSL https://raw.githubusercontent.com/mhfed/vn-law-check/main/install.sh | bash
 ```
 
-Xong thì mở agent/IDE của bạn, bảo nó audit website theo checklist trong repo.
+Script cài checklist vào `.vn-law-check/` và không ghi đè file nào của bạn. Nếu project đã có `AGENTS.md`, `CLAUDE.md`... thì script chỉ chèn thêm một đoạn ngắn trỏ tới `.vn-law-check/`. Chạy lại để cập nhật cũng không bị chèn trùng.
+
+Xong thì bảo agent: "audit pháp lý website này theo luật Việt Nam". Agent sẽ tự quét code để phân loại site trước. Blog hay trang tĩnh không thu thập gì thì chỉ nhận về 1 dòng kết luận, không phải bảng checklist dài.
 
 ### Vì sao làm cái này
 
@@ -46,24 +48,29 @@ Cùng một nội dung, đặt ở nhiều file để mỗi tool tự đọc đ�
 - `.github/copilot-instructions.md` — GitHub Copilot
 - `.clinerules` — Cline
 
-(`plugins/vn-law-check/` là bản copy riêng để nộp lên Claude plugin directory — Anthropic yêu cầu file thật trong plugin folder, không cho symlink. Khi sửa nội dung checklist, nhớ đồng bộ cả bản ở `references/`/`sources/`/`examples`/`SKILL.md` ở root và bản trong `plugins/vn-law-check/skills/vn-law-check/`.)
-
-`install.sh` tự copy hết các file này + 3 folder `references/`, `sources/`, `examples/` vào project của bạn. Không chạy script thì copy tay cũng được, chỉ cần giữ nguyên cấu trúc vì các rules file đều trỏ tới các folder đó.
-
 ### Cấu trúc
 
 ```
-references/   8 checklist theo lĩnh vực (dữ liệu cá nhân, TMĐT, an ninh mạng, NTD, quảng cáo, giao dịch điện tử, AI, xử phạt)
-sources/      văn bản pháp luật dẫn chiếu + tình trạng hiệu lực
-examples/     mẫu báo cáo audit
+references/   00-triage (phân loại site trước khi audit) + 8 checklist theo lĩnh vực
+scripts/      scan.sh — quét source code, phát hiện form/tracking/giỏ hàng/đăng nhập/AI/hosting, gợi ý mức audit
+sources/      văn bản pháp luật dẫn chiếu, ngày hiệu lực, link
+examples/     mẫu báo cáo: rút gọn (site nhỏ) và đầy đủ (bán hàng, nền tảng)
+tests/        site mẫu để kiểm tra scan.sh phân loại đúng
+tools/        sync.sh — sinh các bản copy cho từng tool từ nguồn gốc
 ```
+
+`scan.sh` chỉ đọc file local, không gửi gì ra ngoài.
 
 ### Tình trạng nội dung
 
-Checklist dữ liệu cá nhân, TMĐT, an ninh mạng (01–03) đã research kỹ. Quảng cáo và AI (05, 07) còn sơ bộ, cần đọc thêm luật gốc trước khi tin hẳn. Một số nghị định hướng dẫn (Luật An ninh mạng 2025) vẫn đang ở dạng dự thảo tại thời điểm viết repo.
+Cập nhật 02/11/2026, theo các văn bản mới nhất: Luật BVDLCN 91/2025 + NĐ 356/2025, Luật TMĐT 122/2025 + NĐ 248/2026, Luật An ninh mạng 116/2025 + NĐ 333/2026, Luật Quảng cáo sửa đổi 75/2025 + NĐ 342/2025, Luật Trí tuệ nhân tạo 134/2025 + NĐ 142/2026.
+
+Mỗi mục checklist có dẫn Điều/khoản. Số điều nào chưa đối chiếu được với toàn văn thì ghi "CHƯA XÁC MINH" ngay tại chỗ, phần lớn là các nghị định xử phạt. Toàn bộ link văn bản ở `sources/legal-references.md`.
 
 ### Đóng góp
 
 PR cập nhật văn bản, sửa sai sót đều được hoan nghênh — nhớ trích nguồn (số hiệu văn bản, link thuvienphapluat.vn/vbpl.vn) cho mỗi thay đổi.
+
+Chỉ sửa file nguồn gốc: `AGENTS.md`, `SKILL.md`, `references/`, `sources/`, `examples/`, `scripts/`, `DISCLAIMER.md`. Sau đó chạy `tools/sync.sh` để sinh lại `CLAUDE.md`, rules cho Cursor/Windsurf/Copilot/Cline và bản trong `plugins/`. CI sẽ báo lỗi nếu quên đồng bộ. Sửa `scripts/scan.sh` thì chạy `tests/run.sh` để kiểm tra.
 
 MIT license cho phần code/cấu trúc repo. Văn bản pháp luật được dẫn chiếu là tài liệu công khai của Nhà nước, không thuộc phạm vi license này.
