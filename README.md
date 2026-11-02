@@ -6,13 +6,21 @@ Không phải tư vấn pháp lý, xem [DISCLAIMER.md](./DISCLAIMER.md). Luật 
 
 ### Cài nhanh
 
+Dùng Claude — clone thẳng vào thư mục skills, giống cách cài skill của mọi người:
+
+```bash
+git clone --depth=1 https://github.com/mhfed/vn-law-check ~/.claude/skills/vn-law-check
+```
+
+(muốn cài riêng cho 1 project thì đổi `~/.claude/skills/` thành `.claude/skills/` trong project đó)
+
+Dùng Cursor/Windsurf/Copilot/Cline — copy rules vào project hiện tại:
+
 ```bash
 curl -fsSL https://raw.githubusercontent.com/mhfed/vn-law-check/main/install.sh | bash
 ```
 
-Lệnh này copy đúng bộ rules + checklist vào project hiện tại. Xong thì mở agent/IDE của bạn, bảo nó audit website theo checklist trong repo.
-
-Dùng Claude: copy `SKILL.md` (đổi tên thư mục chứa nó, ví dụ `vn-law-check/`) vào `.claude/skills/` trong project hoặc `~/.claude/skills/` để Claude tự nhận biết lúc nào cần dùng, không phải nhắc tay.
+Xong thì mở agent/IDE của bạn, bảo nó audit website theo checklist trong repo.
 
 ### Vì sao làm cái này
 
@@ -30,12 +38,12 @@ Cùng một nội dung, đặt ở nhiều file để mỗi tool tự đọc đ�
 - `.github/copilot-instructions.md` — GitHub Copilot
 - `.clinerules` — Cline
 
-`install.sh` tự copy hết các file này + 3 folder `checklists/`, `sources/`, `examples/` vào project của bạn. Không chạy script thì copy tay cũng được, chỉ cần giữ nguyên cấu trúc vì các rules file đều trỏ tới các folder đó.
+`install.sh` tự copy hết các file này + 3 folder `references/`, `sources/`, `examples/` vào project của bạn. Không chạy script thì copy tay cũng được, chỉ cần giữ nguyên cấu trúc vì các rules file đều trỏ tới các folder đó.
 
 ### Cấu trúc
 
 ```
-checklists/   8 checklist theo lĩnh vực (dữ liệu cá nhân, TMĐT, an ninh mạng, NTD, quảng cáo, giao dịch điện tử, AI, xử phạt)
+references/   8 checklist theo lĩnh vực (dữ liệu cá nhân, TMĐT, an ninh mạng, NTD, quảng cáo, giao dịch điện tử, AI, xử phạt)
 sources/      văn bản pháp luật dẫn chiếu + tình trạng hiệu lực
 examples/     mẫu báo cáo audit
 ```

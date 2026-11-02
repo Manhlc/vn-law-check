@@ -25,8 +25,8 @@ File này dùng chuẩn [AGENTS.md](https://agents.md) — được nhiều codi
 
 ## Quy trình audit
 
-1. Xác định loại website (xem checklists/02-ecommerce.md mục A để phân loại).
-2. Rà theo từng checklist tại `checklists/`:
+1. Xác định loại website (xem references/02-ecommerce.md mục A để phân loại).
+2. Rà theo từng checklist tại `references/`:
    - `01-personal-data-protection.md` — Bảo vệ dữ liệu cá nhân
    - `02-ecommerce.md` — Thương mại điện tử
    - `03-cybersecurity.md` — An ninh mạng / lưu trữ dữ liệu

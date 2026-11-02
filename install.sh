@@ -15,7 +15,7 @@ trap cleanup EXIT
 echo "Đang tải vn-law-check..."
 git clone --depth 1 --quiet "$REPO" "$TMP"
 
-mkdir -p "$TARGET/.cursor/rules" "$TARGET/.github" "$TARGET/checklists" "$TARGET/sources" "$TARGET/examples"
+mkdir -p "$TARGET/.cursor/rules" "$TARGET/.github" "$TARGET/references" "$TARGET/sources" "$TARGET/examples"
 
 cp "$TMP/AGENTS.md" "$TARGET/"
 cp "$TMP/CLAUDE.md" "$TARGET/"
@@ -23,7 +23,7 @@ cp "$TMP/.windsurfrules" "$TARGET/"
 cp "$TMP/.clinerules" "$TARGET/"
 cp "$TMP/.cursor/rules/vn-legal-compliance.mdc" "$TARGET/.cursor/rules/"
 cp "$TMP/.github/copilot-instructions.md" "$TARGET/.github/"
-cp "$TMP"/checklists/*.md "$TARGET/checklists/"
+cp "$TMP"/references/*.md "$TARGET/references/"
 cp "$TMP"/sources/*.md "$TARGET/sources/"
 cp "$TMP"/examples/*.md "$TARGET/examples/"
 cp "$TMP/DISCLAIMER.md" "$TARGET/"

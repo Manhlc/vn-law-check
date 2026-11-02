@@ -18,8 +18,8 @@ Rà soát (audit) một website theo quy định pháp luật Việt Nam hiện 
 
 ## Quy trình
 
-1. Xác định loại website (xem `checklists/02-ecommerce.md` mục A).
-2. Rà theo từng checklist tại `checklists/`: 01-personal-data-protection, 02-ecommerce, 03-cybersecurity, 04-consumer-protection, 05-advertising, 06-electronic-transactions, 07-ai-transparency, 08-penalties-reference.
+1. Xác định loại website (xem `references/02-ecommerce.md` mục A).
+2. Rà theo từng checklist tại `references/`: 01-personal-data-protection, 02-ecommerce, 03-cybersecurity, 04-consumer-protection, 05-advertising, 06-electronic-transactions, 07-ai-transparency, 08-penalties-reference.
 3. Đọc code/nội dung website thực tế (footer, trang chính sách, cookie banner, form thu thập dữ liệu) để xác định trạng thái — không suy đoán khi chưa kiểm tra.
 4. Xuất báo cáo theo mẫu `examples/sample-audit-report.md`.
 5. Luôn đóng báo cáo bằng phần "Giới hạn & Khuyến nghị" (xem `DISCLAIMER.md`).
