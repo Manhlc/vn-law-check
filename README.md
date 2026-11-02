@@ -73,10 +73,21 @@ Cập nhật 02/11/2026, theo các văn bản mới nhất: Luật BVDLCN 91/202
 
 Mỗi mục checklist có dẫn Điều/khoản. Số điều nào chưa đối chiếu được với toàn văn thì ghi "CHƯA XÁC MINH" ngay tại chỗ, phần lớn là các nghị định xử phạt. Toàn bộ link văn bản ở `sources/legal-references.md`.
 
-### Đóng góp
+### Thấy sai? Góp một tay
 
-PR cập nhật văn bản, sửa sai sót đều được hoan nghênh. Nhớ trích nguồn (số hiệu văn bản, link thuvienphapluat.vn/vbpl.vn) cho mỗi thay đổi.
+Repo này do một người đọc luật và tổng hợp, chắc chắn còn chỗ sai hoặc thiếu. Luật lại đổi liên tục. Một người góp một ý là cả cộng đồng dùng đúng hơn.
 
-Chỉ sửa file nguồn gốc: `AGENTS.md`, `SKILL.md`, `references/`, `sources/`, `examples/`, `scripts/`, `DISCLAIMER.md`. Sau đó chạy `tools/sync.sh` để sinh lại `CLAUDE.md`, rules cho Cursor/Windsurf/Copilot/Cline và bản trong `plugins/`. CI sẽ báo lỗi nếu quên đồng bộ. Sửa `scripts/scan.sh` thì chạy `tests/run.sh` để kiểm tra.
+**Không cần biết code.** Chỉ cần [mở một issue](https://github.com/mhfed/vn-law-check/issues/new/choose) theo mẫu có sẵn:
+- **Báo sai:** số điều sai, văn bản đã hết hiệu lực, mức phạt không khớp, diễn giải chưa chuẩn.
+- **Đề xuất bổ sung:** luật/nghị định mới, lỗi hay gặp mà checklist chưa có, loại website chưa được tính tới.
+- **Tool phân loại sai site của bạn:** `scan.sh` bắt nhầm hoặc bỏ sót.
+
+Chỉ cần kèm link văn bản gốc (thuvienphapluat.vn, vbpl.vn, Công báo) là đủ để mình kiểm tra và sửa.
+
+**Việc đang cần người giúp nhất:** checklist còn 32 chỗ ghi "CHƯA XÁC MINH", tức là có nguồn nhưng chưa đối chiếu được số điều với toàn văn. Phần lớn nằm ở các nghị định xử phạt (`references/08-penalties-reference.md`) và NĐ 356/2025 (`references/01-personal-data-protection.md`). Ai có toàn văn hoặc làm pháp chế, xác minh giúp dù chỉ 1 chỗ cũng rất quý.
+
+Người góp ý được ghi tên trong release notes. Anh chị làm luật muốn được ghi là đã rà soát phần nào thì cứ nói.
+
+**Gửi PR trực tiếp:** chỉ sửa file nguồn gốc: `AGENTS.md`, `SKILL.md`, `references/`, `sources/`, `examples/`, `scripts/`, `DISCLAIMER.md`. Sau đó chạy `tools/sync.sh` để sinh lại `CLAUDE.md`, rules cho Cursor/Windsurf/Copilot/Cline và bản trong `plugins/`. CI sẽ báo lỗi nếu quên đồng bộ. Sửa `scripts/scan.sh` thì chạy `tests/run.sh` để kiểm tra.
 
 MIT license cho phần code/cấu trúc repo. Văn bản pháp luật được dẫn chiếu là tài liệu công khai của Nhà nước, không thuộc phạm vi license này.
