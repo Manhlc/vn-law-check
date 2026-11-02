@@ -73,20 +73,16 @@ Cập nhật 02/11/2026, theo các văn bản mới nhất: Luật BVDLCN 91/202
 
 Mỗi mục checklist có dẫn Điều/khoản. Số điều nào chưa đối chiếu được với toàn văn thì ghi "CHƯA XÁC MINH" ngay tại chỗ, phần lớn là các nghị định xử phạt. Toàn bộ link văn bản ở `sources/legal-references.md`.
 
-### Thấy sai? Góp một tay
+### Thấy sai? Vào bắt lỗi giúp
 
-Repo này do một người đọc luật và tổng hợp, chắc chắn còn chỗ sai hoặc thiếu. Luật lại đổi liên tục. Một người góp một ý là cả cộng đồng dùng đúng hơn.
+Mình là dev, không phải luật sư. Đọc hiểu tới đâu thì viết vào checklist tới đó, chỗ nào chưa chắc thì ghi thẳng "CHƯA XÁC MINH". Đếm lại thì còn 32 chỗ như vậy 😅 Phần lớn nằm ở các nghị định xử phạt (`references/08-penalties-reference.md`) và NĐ 356/2025 (`references/01-personal-data-protection.md`).
 
-**Không cần biết code.** Chỉ cần [mở một issue](https://github.com/mhfed/vn-law-check/issues/new/choose) theo mẫu có sẵn:
-- **Báo sai:** số điều sai, văn bản đã hết hiệu lực, mức phạt không khớp, diễn giải chưa chuẩn.
-- **Đề xuất bổ sung:** luật/nghị định mới, lỗi hay gặp mà checklist chưa có, loại website chưa được tính tới.
-- **Tool phân loại sai site của bạn:** `scan.sh` bắt nhầm hoặc bỏ sót.
+Nên nếu bạn làm luật, hoặc đơn giản là đọc luật kỹ hơn mình, vào bắt lỗi giúp. Không cần biết code, [mở một issue](https://github.com/mhfed/vn-law-check/issues/new/choose) theo mẫu có sẵn là được:
+- Thấy chỗ sai: số điều, văn bản hết hiệu lực, mức phạt, cách hiểu chưa chuẩn
+- Thấy chỗ thiếu: luật mới, lỗi hay gặp mà checklist chưa có
+- Tool xếp nhầm site của bạn
 
-Chỉ cần kèm link văn bản gốc (thuvienphapluat.vn, vbpl.vn, Công báo) là đủ để mình kiểm tra và sửa.
-
-**Việc đang cần người giúp nhất:** checklist còn 32 chỗ ghi "CHƯA XÁC MINH", tức là có nguồn nhưng chưa đối chiếu được số điều với toàn văn. Phần lớn nằm ở các nghị định xử phạt (`references/08-penalties-reference.md`) và NĐ 356/2025 (`references/01-personal-data-protection.md`). Ai có toàn văn hoặc làm pháp chế, xác minh giúp dù chỉ 1 chỗ cũng rất quý.
-
-Người góp ý được ghi tên trong release notes. Anh chị làm luật muốn được ghi là đã rà soát phần nào thì cứ nói.
+Kèm link văn bản gốc là mình kiểm tra được ngay. Hứa không cãi, chỉ sửa và ghi tên bạn vào bản cập nhật.
 
 **Gửi PR trực tiếp:** chỉ sửa file nguồn gốc: `AGENTS.md`, `SKILL.md`, `references/`, `sources/`, `examples/`, `scripts/`, `DISCLAIMER.md`. Sau đó chạy `tools/sync.sh` để sinh lại `CLAUDE.md`, rules cho Cursor/Windsurf/Copilot/Cline và bản trong `plugins/`. CI sẽ báo lỗi nếu quên đồng bộ. Sửa `scripts/scan.sh` thì chạy `tests/run.sh` để kiểm tra.
 

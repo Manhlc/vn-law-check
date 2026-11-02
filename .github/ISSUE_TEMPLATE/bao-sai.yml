@@ -6,7 +6,7 @@ body:
   - type: markdown
     attributes:
       value: |
-        Cảm ơn bạn đã dành thời gian. Không cần biết code, chỉ cần chỉ ra chỗ sai và nguồn đúng.
+        Cảm ơn đã vào bắt lỗi giúp 🙏 Không cần biết code, chỉ ra chỗ sai và kèm link văn bản là đủ.
   - type: input
     id: vi-tri
     attributes:
