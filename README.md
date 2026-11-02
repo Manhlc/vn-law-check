@@ -1,12 +1,12 @@
 # vn-law-check
 
-Checklist + rules cho AI coding agent audit sơ bộ pháp lý website Việt Nam: dữ liệu cá nhân, thương mại điện tử, an ninh mạng, bảo vệ người tiêu dùng, quảng cáo, giao dịch điện tử, minh bạch AI.
+**Bảo AI agent "audit pháp lý site này", nó quét code rồi chỉ ra chỗ site đang dính luật Việt Nam: file nào, dòng nào, điều luật nào.**
+
+Dùng với Claude Code, Cursor, Copilot, Windsurf, Cline. Theo luật mới 2025-2026: dữ liệu cá nhân, TMĐT, an ninh mạng, người tiêu dùng, quảng cáo, AI.
 
 ![Demo: quét một shop cà phê và một blog tĩnh](demo/demo.png)
 
-Ảnh trên chạy trên một [shop demo](demo/site/) cố ý chứa các lỗi thường gặp. Xem [báo cáo đầy đủ](demo/report.md): mỗi phát hiện có file:dòng và số điều luật.
-
-Không phải tư vấn pháp lý, xem [DISCLAIMER.md](./DISCLAIMER.md). Luật VN ở mảng này vừa đổi gần hết trong 2025-2026, nên tự xác minh lại trước khi dựa vào.
+**Thử trong 5 giây, chưa cần cài:** mở trang chính sách bảo mật của site bạn, Ctrl+F tìm "Nghị định 13". Nếu thấy thì site đang dẫn một văn bản đã hết hiệu lực từ 01/01/2026, và thường đó chưa phải lỗi duy nhất. Xem [báo cáo trên shop demo](demo/report.md) để biết agent tìm được những gì.
 
 ### Cài nhanh
 
@@ -34,6 +34,8 @@ curl -fsSL https://raw.githubusercontent.com/mhfed/vn-law-check/main/install.sh 
 Script cài checklist vào `.vn-law-check/` và không ghi đè file nào của bạn. Nếu project đã có `AGENTS.md`, `CLAUDE.md`... thì script chỉ chèn thêm một đoạn ngắn trỏ tới `.vn-law-check/`. Chạy lại để cập nhật cũng không bị chèn trùng.
 
 Xong thì bảo agent: "audit pháp lý website này theo luật Việt Nam". Agent sẽ tự quét code để phân loại site trước. Blog hay trang tĩnh không thu thập gì thì chỉ nhận về 1 dòng kết luận, không phải bảng checklist dài.
+
+Không phải tư vấn pháp lý, xem [DISCLAIMER.md](./DISCLAIMER.md). Luật ở mảng này vừa đổi gần hết trong 2025-2026, nên tự xác minh lại trước khi dựa vào.
 
 ### Vì sao làm cái này
 
