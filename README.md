@@ -2,6 +2,10 @@
 
 Checklist + rules cho AI coding agent audit sơ bộ pháp lý website Việt Nam: dữ liệu cá nhân, thương mại điện tử, an ninh mạng, bảo vệ người tiêu dùng, quảng cáo, giao dịch điện tử, minh bạch AI.
 
+![Demo: quét một shop cà phê và một blog tĩnh](demo/demo.png)
+
+Ảnh trên chạy trên một [shop demo](demo/site/) cố ý chứa các lỗi thường gặp. Xem [báo cáo đầy đủ](demo/report.md): mỗi phát hiện có file:dòng và số điều luật.
+
 Không phải tư vấn pháp lý, xem [DISCLAIMER.md](./DISCLAIMER.md). Luật VN ở mảng này vừa đổi gần hết trong 2025–2026, nên tự xác minh lại trước khi dựa vào.
 
 ### Cài nhanh
