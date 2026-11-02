@@ -1,12 +1,12 @@
 # vn-law-check
 
-**Bảo AI agent "audit pháp lý site này", nó quét code rồi chỉ ra chỗ site đang dính luật Việt Nam: file nào, dòng nào, điều luật nào.**
+**Code do AI viết thì để AI soi luật luôn.** Bảo agent "audit pháp lý site này", nó quét code rồi chỉ ra chỗ site đang dính luật Việt Nam: file nào, dòng nào, điều luật nào. Thấy lỗi thì bảo nó sửa tiếp.
 
 Dùng với Claude Code, Cursor, Copilot, Windsurf, Cline. Theo luật mới 2025-2026: dữ liệu cá nhân, TMĐT, an ninh mạng, người tiêu dùng, quảng cáo, AI.
 
 ![Demo: quét một shop cà phê và một blog tĩnh](demo/demo.png)
 
-**Thử trong 5 giây, chưa cần cài:** mở trang chính sách bảo mật của site bạn, Ctrl+F tìm "Nghị định 13". Nếu thấy thì site đang dẫn một văn bản đã hết hiệu lực từ 01/01/2026, và thường đó chưa phải lỗi duy nhất. Xem [báo cáo trên shop demo](demo/report.md) để biết agent tìm được những gì.
+**Site bạn có ô nhập email hoặc số điện thoại?** Vậy là đang thu thập dữ liệu cá nhân. Từ 01/01/2026, Luật Bảo vệ dữ liệu cá nhân 91/2025 bắt phải báo rõ thu dữ liệu để làm gì và xin đồng ý đúng cách. Site vibe code thường chưa có trang chính sách nào. Site cũ thì hay có chính sách copy từ đâu đó, vẫn ghi "Nghị định 13" dù văn bản này hết hiệu lực từ 01/01/2026. Rơi vào trường hợp nào thì cũng nên chạy thử. Xem [báo cáo trên shop demo](demo/report.md) để biết agent tìm được những gì.
 
 ### Cài nhanh
 
