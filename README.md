@@ -4,6 +4,16 @@ Checklist + rules cho AI coding agent audit sơ bộ pháp lý website Việt Na
 
 Không phải tư vấn pháp lý, xem [DISCLAIMER.md](./DISCLAIMER.md). Luật VN ở mảng này vừa đổi gần hết trong 2025–2026, nên tự xác minh lại trước khi dựa vào.
 
+### Cài nhanh
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/mhfed/vn-law-check/main/install.sh | bash
+```
+
+Lệnh này copy đúng bộ rules + checklist vào project hiện tại. Xong thì mở agent/IDE của bạn, bảo nó audit website theo checklist trong repo.
+
+Dùng Claude: copy `SKILL.md` (đổi tên thư mục chứa nó, ví dụ `vn-law-check/`) vào `.claude/skills/` trong project hoặc `~/.claude/skills/` để Claude tự nhận biết lúc nào cần dùng, không phải nhắc tay.
+
 ### Vì sao làm cái này
 
 Rules compliance có sẵn trên GitHub cho AI agent gần như toàn GDPR/CCPA. Chưa có cái nào theo luật Việt Nam — mà luật VN vừa thay gần hết: Luật Bảo vệ dữ liệu cá nhân 2025, Luật Thương mại điện tử 2025, Luật An ninh mạng 2025 đều mới có hiệu lực trong 2026, thay các nghị định cũ.
@@ -14,12 +24,13 @@ Cùng một nội dung, đặt ở nhiều file để mỗi tool tự đọc đ�
 
 - `AGENTS.md` — chuẩn chung (Cursor, Codex, Jules, Amp, Zed...)
 - `CLAUDE.md` — Claude
+- `SKILL.md` — Claude Skill, cho vào `.claude/skills/`
 - `.cursor/rules/vn-legal-compliance.mdc` — Cursor
 - `.windsurfrules` — Windsurf
 - `.github/copilot-instructions.md` — GitHub Copilot
 - `.clinerules` — Cline
 
-Copy các file trên + 3 folder `checklists/`, `sources/`, `examples/` vào project của bạn là dùng được.
+`install.sh` tự copy hết các file này + 3 folder `checklists/`, `sources/`, `examples/` vào project của bạn. Không chạy script thì copy tay cũng được, chỉ cần giữ nguyên cấu trúc vì các rules file đều trỏ tới các folder đó.
 
 ### Cấu trúc
 
@@ -28,10 +39,6 @@ checklists/   8 checklist theo lĩnh vực (dữ liệu cá nhân, TMĐT, an nin
 sources/      văn bản pháp luật dẫn chiếu + tình trạng hiệu lực
 examples/     mẫu báo cáo audit
 ```
-
-### Cách dùng
-
-Mở agent, bảo nó audit website theo checklist trong repo. Nó đọc rules, lần qua từng checklist, đối chiếu với code/nội dung thật (footer, trang chính sách, cookie banner, form thu thập dữ liệu...), rồi xuất báo cáo theo mẫu trong `examples/`.
 
 ### Tình trạng nội dung
 
