@@ -6,7 +6,14 @@ Không phải tư vấn pháp lý, xem [DISCLAIMER.md](./DISCLAIMER.md). Luật 
 
 ### Cài nhanh
 
-Dùng Claude — clone thẳng vào thư mục skills, giống cách cài skill của mọi người:
+Dùng Claude Code — cài qua plugin marketplace (gõ trong Claude Code, không phải terminal):
+
+```
+/plugin marketplace add mhfed/vn-law-check
+/plugin install vn-law-check
+```
+
+Hoặc clone thẳng vào thư mục skills, không cần qua marketplace:
 
 ```bash
 git clone --depth=1 https://github.com/mhfed/vn-law-check ~/.claude/skills/vn-law-check
@@ -33,10 +40,13 @@ Cùng một nội dung, đặt ở nhiều file để mỗi tool tự đọc đ�
 - `AGENTS.md` — chuẩn chung (Cursor, Codex, Jules, Amp, Zed...)
 - `CLAUDE.md` — Claude
 - `SKILL.md` — Claude Skill, cho vào `.claude/skills/`
+- `.claude-plugin/marketplace.json` + `plugins/vn-law-check/` — để cài qua `/plugin marketplace add` trong Claude Code
 - `.cursor/rules/vn-legal-compliance.mdc` — Cursor
 - `.windsurfrules` — Windsurf
 - `.github/copilot-instructions.md` — GitHub Copilot
 - `.clinerules` — Cline
+
+(nội dung skill bên trong `plugins/vn-law-check/skills/vn-law-check/` chỉ là symlink trỏ về `references/`, `sources/`, `examples/`, `SKILL.md` ở root — sửa 1 nơi, cả hai cách cài đều cập nhật theo)
 
 `install.sh` tự copy hết các file này + 3 folder `references/`, `sources/`, `examples/` vào project của bạn. Không chạy script thì copy tay cũng được, chỉ cần giữ nguyên cấu trúc vì các rules file đều trỏ tới các folder đó.
 
