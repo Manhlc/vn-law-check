@@ -30,7 +30,7 @@ Bất kể mức nào ở trên: nếu có chatbot AI hoặc nội dung AI-gener
 
 ## Quy mô chủ site
 
-Site của cá nhân, hộ kinh doanh hoặc doanh nghiệp siêu nhỏ được miễn một phần nghĩa vụ dữ liệu cá nhân theo Điều 39 Luật 91/2025:
+Site của hộ kinh doanh hoặc doanh nghiệp siêu nhỏ được miễn một phần nghĩa vụ dữ liệu cá nhân theo Điều 39 Luật 91/2025 (Điều 39 không nhắc tới cá nhân; site cá nhân có thuộc diện điều chỉnh hay không: CHƯA XÁC MINH):
 - miễn DPIA
 - miễn hồ sơ chuyển dữ liệu xuyên biên giới
 - miễn chỉ định nhân sự bảo vệ dữ liệu

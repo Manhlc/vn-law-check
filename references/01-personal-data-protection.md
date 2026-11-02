@@ -16,7 +16,7 @@
 - Doanh nghiệp nhỏ và doanh nghiệp khởi nghiệp sáng tạo được chọn chưa thực hiện các nghĩa vụ trên trong 5 năm.
 - Không được miễn nếu kinh doanh dịch vụ xử lý dữ liệu, xử lý dữ liệu nhạy cảm, hoặc xử lý dữ liệu số lượng lớn.
 
-→ Với site của cá nhân, hộ kinh doanh, doanh nghiệp siêu nhỏ: mục D và E thường ⚪, trừ khi rơi vào các trường hợp không được miễn. Các mục A, B, C vẫn áp dụng.
+→ Với site của hộ kinh doanh, doanh nghiệp siêu nhỏ: mục D và E thường ⚪, trừ khi rơi vào các trường hợp không được miễn. Các mục A, B, C vẫn áp dụng.
 
 ## A. Chính sách & minh bạch
 - [ ] Có trang chính sách bảo vệ dữ liệu cá nhân công khai, dễ tìm (thường ở footer). Trang này nêu rõ loại dữ liệu thu thập, mục đích, thời gian lưu trữ, bên thứ ba được chia sẻ.
