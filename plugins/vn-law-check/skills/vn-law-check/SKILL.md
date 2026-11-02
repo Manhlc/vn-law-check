@@ -14,14 +14,14 @@ Rà soát (audit) một website theo quy định pháp luật Việt Nam hiện 
 3. Luật Việt Nam về dữ liệu cá nhân, TMĐT, an ninh mạng đang trong giai đoạn chuyển tiếp mạnh (nhiều luật mới 2025 có hiệu lực trong 2026, một số nghị định hướng dẫn còn ở dạng dự thảo). Luôn khuyến nghị người dùng xác minh lại văn bản còn hiệu lực tại thuvienphapluat.vn hoặc vbpl.vn.
 4. Mỗi phát hiện phân loại mức độ: 🔴 Cần xử lý ngay / 🟡 Nên cải thiện / 🟢 Đạt yêu cầu / ⚪ Không áp dụng.
 5. Luôn khuyến nghị tham vấn luật sư cho quyết định cuối cùng, đặc biệt với mục 🔴.
-6. Không tự suy đoán loại hình kinh doanh — nếu không rõ website là bán hàng, nền tảng dịch vụ TMĐT, hay chỉ là trang thông tin/blog, hỏi lại người dùng trước (nghĩa vụ pháp lý khác nhau theo loại hình).
+6. Tự xác định loại hình website bằng cách quét code/nội dung thực tế (xem `references/00-triage.md`) — không đoán bừa, nhưng cũng không hỏi người dùng nếu quét được. Chỉ hỏi lại khi quét xong vẫn không xác định được.
 
 ## Quy trình
 
-1. Xác định loại website (xem `references/02-ecommerce.md` mục A).
-2. Rà theo từng checklist tại `references/`: 01-personal-data-protection, 02-ecommerce, 03-cybersecurity, 04-consumer-protection, 05-advertising, 06-electronic-transactions, 07-ai-transparency, 08-penalties-reference.
+1. **Luôn bắt đầu bằng `references/00-triage.md`** — phân loại mức độ phức tạp (tĩnh/thu thập nhẹ/bán hàng/nền tảng quy mô) trước khi mở checklist nào. Site tĩnh không form, không script theo dõi, không bán hàng thì KHÔNG audit đầy đủ 8 checklist.
+2. Theo bảng phân loại ở bước 1, chỉ mở checklist thực sự áp dụng tại `references/`: 01-personal-data-protection, 02-ecommerce, 03-cybersecurity, 04-consumer-protection, 05-advertising, 06-electronic-transactions, 07-ai-transparency (luôn thêm nếu có chatbot/nội dung AI), 08-penalties-reference.
 3. Đọc code/nội dung website thực tế (footer, trang chính sách, cookie banner, form thu thập dữ liệu) để xác định trạng thái — không suy đoán khi chưa kiểm tra.
-4. Xuất báo cáo theo mẫu `examples/sample-audit-report.md`.
+4. Xuất báo cáo theo mẫu `examples/sample-audit-report.md`. Với site mức 0–1, dùng bản rút gọn, không liệt kê các checklist không áp dụng thành bảng dài.
 5. Luôn đóng báo cáo bằng phần "Giới hạn & Khuyến nghị" (xem `DISCLAIMER.md`).
 
 Nguồn pháp luật đầy đủ: `sources/legal-references.md`.
