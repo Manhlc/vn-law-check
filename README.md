@@ -46,7 +46,7 @@ Cùng một nội dung, đặt ở nhiều file để mỗi tool tự đọc đ�
 - `.github/copilot-instructions.md` — GitHub Copilot
 - `.clinerules` — Cline
 
-(nội dung skill bên trong `plugins/vn-law-check/skills/vn-law-check/` chỉ là symlink trỏ về `references/`, `sources/`, `examples/`, `SKILL.md` ở root — sửa 1 nơi, cả hai cách cài đều cập nhật theo)
+(`plugins/vn-law-check/` là bản copy riêng để nộp lên Claude plugin directory — Anthropic yêu cầu file thật trong plugin folder, không cho symlink. Khi sửa nội dung checklist, nhớ đồng bộ cả bản ở `references/`/`sources/`/`examples`/`SKILL.md` ở root và bản trong `plugins/vn-law-check/skills/vn-law-check/`.)
 
 `install.sh` tự copy hết các file này + 3 folder `references/`, `sources/`, `examples/` vào project của bạn. Không chạy script thì copy tay cũng được, chỉ cần giữ nguyên cấu trúc vì các rules file đều trỏ tới các folder đó.
 
