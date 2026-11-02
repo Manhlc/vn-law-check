@@ -18,7 +18,7 @@ Rà soát (audit) một website theo quy định pháp luật Việt Nam hiện 
 
 ## Quy trình
 
-1. **Luôn bắt đầu bằng `references/00-triage.md`**: phân loại mức độ phức tạp (tĩnh/thu thập nhẹ/bán hàng/nền tảng quy mô) trước khi mở checklist nào. Có source code thì chạy `bash scripts/scan.sh <thư-mục-code>` để quét tự động, rồi xem lại bằng chứng script in ra. Site tĩnh không form, không script theo dõi, không bán hàng thì KHÔNG audit đầy đủ 8 checklist.
+1. **Luôn bắt đầu bằng `references/00-triage.md`**: phân loại mức độ phức tạp (tĩnh/thu thập nhẹ/bán hàng/nền tảng quy mô) trước khi mở checklist nào. Chạy `bash scripts/scan.sh <thư-mục-code>`, hoặc `bash scripts/scan.sh <URL>` nếu chỉ có địa chỉ website, để quét tự động, rồi xem lại bằng chứng script in ra. Site tĩnh không form, không script theo dõi, không bán hàng thì KHÔNG audit đầy đủ 8 checklist.
 2. Theo bảng phân loại ở bước 1, chỉ mở checklist thực sự áp dụng tại `references/`: 01-personal-data-protection, 02-ecommerce, 03-cybersecurity, 04-consumer-protection, 05-advertising, 06-electronic-transactions, 07-ai-transparency (luôn thêm nếu có chatbot/nội dung AI), 08-penalties-reference.
 3. Đọc code/nội dung website thực tế (footer, trang chính sách, cookie banner, form thu thập dữ liệu) để xác định trạng thái. Chưa kiểm tra thì không suy đoán.
 4. Xuất báo cáo theo mẫu `examples/sample-audit-report.md`. Với site mức 0-1, dùng bản rút gọn, không liệt kê các checklist không áp dụng thành bảng dài.

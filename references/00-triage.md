@@ -4,7 +4,9 @@ Làm bước này trước khi mở bất kỳ checklist nào. Mục tiêu: khô
 
 **Tự quét để xác định, không hỏi người dùng những câu này.**
 
-Có source code: chạy `bash scripts/scan.sh <thư-mục-code>`. Script in ra từng tín hiệu kèm bằng chứng (file:dòng) và gợi ý mức. Xem lại bằng chứng, vì script chỉ grep nên có thể bắt nhầm (ví dụ chữ "thanh toán" trong một bài blog). Chỉ có URL: lưu HTML trang chủ và vài trang chính (liên hệ, sản phẩm, chính sách) vào một thư mục tạm rồi chạy script trên thư mục đó, hoặc tự đọc page source.
+Có source code: chạy `bash scripts/scan.sh <thư-mục-code>`. Chỉ có URL: chạy `bash scripts/scan.sh https://ten-mien.vn`. Script sẽ tải trang chủ, các trang chính sách/liên hệ/giỏ hàng được link từ trang chủ, và file JS cùng tên miền về thư mục tạm rồi quét. Sau đó đọc trang chính sách trong thư mục đó để audit nội dung.
+
+Script in ra từng tín hiệu kèm bằng chứng (file:dòng:đoạn khớp) và gợi ý mức. Xem lại bằng chứng, vì script chỉ grep nên có thể bắt nhầm (ví dụ chữ "thanh toán" trong một bài blog). Quét qua URL không thấy code phía server: chatbot gọi AI qua server, dữ liệu lưu ở đâu. Những điểm đó cần xem trực tiếp trên trang hoặc hỏi chủ site.
 
 Các câu hỏi script đang trả lời (dùng để kiểm tra lại bằng tay khi cần):
 

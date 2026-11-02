@@ -21,7 +21,7 @@ Mọi đường dẫn trong file này (`references/`, `scripts/`, `examples/`, `
 
 ## Quy trình audit
 
-1. **Luôn bắt đầu bằng `references/00-triage.md`**: phân loại mức độ phức tạp của website (tĩnh/thu thập nhẹ/bán hàng/nền tảng quy mô) trước khi đụng tới checklist nào. Có source code thì chạy `bash scripts/scan.sh <thư-mục-code>` để quét tự động, rồi xem lại bằng chứng (file:dòng) script in ra trước khi kết luận. Website tĩnh không form, không script theo dõi, không bán hàng thì KHÔNG audit đầy đủ 8 checklist. Xem mục "Cách báo cáo cho site mức 0-1" trong file đó.
+1. **Luôn bắt đầu bằng `references/00-triage.md`**: phân loại mức độ phức tạp của website (tĩnh/thu thập nhẹ/bán hàng/nền tảng quy mô) trước khi đụng tới checklist nào. Chạy `bash scripts/scan.sh <thư-mục-code>`, hoặc `bash scripts/scan.sh <URL>` nếu chỉ có địa chỉ website, để quét tự động, rồi xem lại bằng chứng (file:dòng) script in ra trước khi kết luận. Website tĩnh không form, không script theo dõi, không bán hàng thì KHÔNG audit đầy đủ 8 checklist. Xem mục "Cách báo cáo cho site mức 0-1" trong file đó.
 2. Theo bảng phân loại ở bước 1, chỉ mở những checklist thực sự áp dụng tại `references/`:
    - `01-personal-data-protection.md`: Bảo vệ dữ liệu cá nhân
    - `02-ecommerce.md`: Thương mại điện tử

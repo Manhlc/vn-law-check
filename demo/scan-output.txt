@@ -1,25 +1,25 @@
 Quét: demo/site
 
 [có]    FORM
-          demo/site/index.html:41:    <form action="/api/subscribe" method="POST">
-          demo/site/index.html:43:      <input type="email" name="email" placeholder="Email">
+          index.html:41:<form 
+          index.html:43:type="email"
 [có]    TRACKING
-          demo/site/index.html:7:  <script async src="https://www.googletagmanager.com/gtag/js?id=G-DEMO123"></script>
-          demo/site/index.html:8:  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-DEMO123
-          demo/site/index.html:10:  <script>!function(f,b,e,v,n,t,s){n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};f._fbq=n;n.q
+          index.html:7:googletagmanager.com
+          index.html:8:gtag(
+          index.html:10:connect.facebook.net
 [có]    COMMERCE
-          demo/site/index.html:17:    <a href="/cart">Giỏ hàng</a>
-          demo/site/index.html:30:      <button class="add-to-cart" data-id="1">Thêm vào giỏ</button>
-          demo/site/index.html:35:      <button class="add-to-cart" data-id="2">Thêm vào giỏ</button>
+          index.html:17:/cart"
+          index.html:17:Giỏ hàng
+          index.html:30:add-to-cart
 [có]    AUTH
-          demo/site/index.html:18:    <a href="/login">Đăng nhập</a>
-          demo/site/package.json:4:  "dependencies": { "firebase": "10.12.0", "next-auth": "5.0.0" }
+          index.html:18:/login
+          package.json:4:next-auth
 [không] MARKETPLACE
 [có]    AI
-          demo/site/api/chat.js:4:  const r = await fetch('https://api.openai.com/v1/chat/completions', {
+          api/chat.js:4:api.openai.com
 [có]    FOREIGN_HOST
-          demo/site/api/subscribe.js:1:import { getFirestore, collection, addDoc } from 'firebase/firestore';
-          demo/site/package.json:4:  "dependencies": { "firebase": "10.12.0", "next-auth": "5.0.0" }
+          api/subscribe.js:1:firebase/firestore
+          package.json:4:"firebase"
 
 Gợi ý: mức 2, bán hàng/TMĐT. Áp dụng 01 + 02 + 04 (thêm 05/06 nếu có quảng cáo, hợp đồng điện tử)
         + có dấu hiệu AI → thêm 07-ai-transparency

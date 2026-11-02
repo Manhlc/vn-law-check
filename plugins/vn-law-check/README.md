@@ -8,9 +8,13 @@ Trước khi mở checklist, Claude phân loại website theo 4 mức (tĩnh, th
 
 Plugin gồm:
 - các file markdown: checklist, rules, mẫu báo cáo, danh sách nguồn luật
-- một script bash `skills/vn-law-check/scripts/scan.sh`
+- hai script bash trong `skills/vn-law-check/scripts/`
 
-Claude chạy script này để quét source code của website trên máy người dùng: dùng `grep` tìm form, script theo dõi, giỏ hàng, đăng nhập, chatbot AI, cấu hình hosting, rồi in kết quả ra màn hình. Script chỉ đọc file local, không ghi file, không gọi mạng, không gửi dữ liệu đi đâu.
+`scan.sh` quét website bằng `grep` để tìm form, script theo dõi, giỏ hàng, đăng nhập, chatbot AI, dấu hiệu hosting, rồi in kết quả ra màn hình:
+- Khi đưa vào một thư mục source code: chỉ đọc file local, không gọi mạng.
+- Khi đưa vào một URL: gọi `fetch-site.sh`. Script này dùng `curl` gửi request GET tới **chính URL người dùng đưa vào**, tải trang chủ, tối đa 15 trang cùng tên miền được link từ trang chủ (chính sách, liên hệ, sản phẩm, giỏ hàng, đăng nhập) và tối đa 20 file JavaScript cùng tên miền, mỗi file không quá 5 MB, vào một thư mục tạm trên máy người dùng. Request có User-Agent `vn-law-check (+https://github.com/mhfed/vn-law-check)`.
+
+Hai script không gửi dữ liệu đi đâu khác, không đọc biến môi trường hay credential, không sửa file của người dùng.
 
 Plugin không chạy MCP server, không có hook, không cần cấu hình gì thêm.
 

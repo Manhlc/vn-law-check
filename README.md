@@ -33,7 +33,7 @@ curl -fsSL https://raw.githubusercontent.com/mhfed/vn-law-check/main/install.sh 
 
 Script cài checklist vào `.vn-law-check/` và không ghi đè file nào của bạn. Nếu project đã có `AGENTS.md`, `CLAUDE.md`... thì script chỉ chèn thêm một đoạn ngắn trỏ tới `.vn-law-check/`. Chạy lại để cập nhật cũng không bị chèn trùng.
 
-Xong thì bảo agent: "audit pháp lý website này theo luật Việt Nam". Agent sẽ tự quét code để phân loại site trước. Blog hay trang tĩnh không thu thập gì thì chỉ nhận về 1 dòng kết luận, không phải bảng checklist dài.
+Xong thì bảo agent: "audit pháp lý website này theo luật Việt Nam". Không có source code, chỉ có địa chỉ website cũng được: "audit pháp lý https://ten-mien.vn". Agent sẽ tự quét code để phân loại site trước. Blog hay trang tĩnh không thu thập gì thì chỉ nhận về 1 dòng kết luận, không phải bảng checklist dài.
 
 Không phải tư vấn pháp lý, xem [DISCLAIMER.md](./DISCLAIMER.md). Luật ở mảng này vừa đổi gần hết trong 2025-2026, nên tự xác minh lại trước khi dựa vào.
 
@@ -58,14 +58,15 @@ Cùng một nội dung, đặt ở nhiều file để mỗi tool tự đọc đ�
 
 ```
 references/   00-triage (phân loại site trước khi audit) + 8 checklist theo lĩnh vực
-scripts/      scan.sh: quét source code, phát hiện form/tracking/giỏ hàng/đăng nhập/AI/hosting, gợi ý mức audit
+scripts/      scan.sh: quét source code hoặc URL, phát hiện form/tracking/giỏ hàng/đăng nhập/AI/hosting, gợi ý mức audit
+              fetch-site.sh: tải trang công khai của một URL để scan.sh quét
 sources/      văn bản pháp luật dẫn chiếu, ngày hiệu lực, link
 examples/     mẫu báo cáo: rút gọn (site nhỏ) và đầy đủ (bán hàng, nền tảng)
 tests/        site mẫu để kiểm tra scan.sh phân loại đúng
 tools/        sync.sh: sinh các bản copy cho từng tool từ nguồn gốc
 ```
 
-`scan.sh` chỉ đọc file local, không gửi gì ra ngoài.
+`scan.sh` quét thư mục code thì chỉ đọc file local. Quét theo URL thì gọi `fetch-site.sh` tải các trang công khai của chính site đó (tối đa 15 trang và 20 file JS cùng tên miền), không gửi dữ liệu đi đâu khác. Quét site người khác thì cũng chỉ thấy những gì ai mở trình duyệt cũng thấy, nhưng kết quả nhớ gửi riêng cho chủ site, đừng đem đi bêu tên.
 
 ### Tình trạng nội dung
 
