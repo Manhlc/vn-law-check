@@ -75,6 +75,14 @@ audit pháp lý https://ten-mien-cua-ban.vn
 
 **Bước 3: sửa.** Đọc báo cáo, rồi bảo tiếp: "sửa giúp các mục 🔴".
 
+Chưa có chính sách bảo mật, hoặc có mà copy từ đâu đó? Bảo tiếp:
+
+```
+soạn chính sách bảo mật cho dự án này
+```
+
+Agent lấy đúng những dữ liệu site đang thu, những dịch vụ bên thứ ba đang gọi (Google Analytics, Firebase, OpenAI...) từ code để viết chính sách, rồi sửa luôn form đồng ý và banner cookie. Thông tin nó không tìm được trong code như tên đơn vị, mã số thuế thì để trống cho bạn điền, không tự bịa. Kết quả là bản nháp, nên nhờ người làm luật xem lại trước khi đăng.
+
 ## Hỏi nhanh
 
 **Có thay được luật sư không?** Không. Đây là bước rà soát ban đầu để biết mình đang thiếu gì. Mục 🔴 nên hỏi lại người làm luật. Xem [DISCLAIMER.md](./DISCLAIMER.md).
@@ -129,11 +137,12 @@ Cùng một nội dung, đặt ở nhiều file để mỗi tool tự đọc đ�
 
 ```
 references/   00-triage (phân loại site trước khi audit) + 9 checklist theo lĩnh vực, có 1 checklist cho mobile app
+              10-generate-policy: hướng dẫn soạn chính sách bảo mật, form đồng ý từ kết quả quét
 scripts/      scan.sh: quét source code hoặc URL, phát hiện form/tracking/giỏ hàng/đăng nhập/AI/hosting,
               với mobile app: quyền truy cập, SDK tracking/quảng cáo, chức năng xóa tài khoản
               fetch-site.sh: tải trang công khai của một URL để scan.sh quét
 sources/      văn bản pháp luật dẫn chiếu, ngày hiệu lực, link
-examples/     mẫu báo cáo: rút gọn (site nhỏ) và đầy đủ (bán hàng, nền tảng)
+examples/     mẫu báo cáo (rút gọn, đầy đủ) + khung chính sách bảo mật, form đồng ý, banner cookie
 tests/        site mẫu để kiểm tra scan.sh phân loại đúng
 tools/        sync.sh: sinh các bản copy cho từng tool từ nguồn gốc
 ```
