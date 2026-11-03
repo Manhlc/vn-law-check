@@ -49,7 +49,7 @@ Luật không có điều riêng về cookie (CHƯA XÁC MINH). Căn cứ gần 
 - Xử lý dữ liệu cho mục đích quảng cáo phải có đồng ý và phải có cách để từ chối nhận quảng cáo (Điều 28 Luật 91/2025).
 
 Cần kiểm tra:
-- [ ] Banner xin đồng ý xuất hiện **trước** khi nạp script không thiết yếu (Google Analytics, Facebook Pixel, TikTok Pixel...).
+- [ ] Banner xin đồng ý xuất hiện **trước** khi nạp script không thiết yếu (Google Analytics, Facebook Pixel, TikTok Pixel...). Xem `TRACKING_CONSENT` trong kết quả `scan.sh` (giải thích ở `00-triage.md`).
 - [ ] Từ chối cookie không thiết yếu mà vẫn dùng được chức năng chính của site.
 - [ ] Liệt kê các bên thứ ba nhận dữ liệu qua cookie/SDK trong chính sách.
 

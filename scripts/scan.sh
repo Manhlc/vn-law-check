@@ -42,8 +42,9 @@ INCLUDE=(--include='*.html' --include='*.htm' --include='*.js' --include='*.mjs'
          --include='Info.plist' --include='Podfile')
 
 # -o: chỉ in đoạn khớp, để bằng chứng vẫn đọc được với file JS đã minify (cả file nằm trên 1 dòng)
-GREP_ARGS=(-rEIino "${INCLUDE[@]}" --exclude='package-lock.json' --exclude='*.lock' --exclude='*.min.js')
-for d in "${EXCLUDE_DIRS[@]}"; do GREP_ARGS+=(--exclude-dir="$d"); done
+EXCLUDE_ARGS=(--exclude='package-lock.json' --exclude='*.lock' --exclude='*.min.js')
+for d in "${EXCLUDE_DIRS[@]}"; do EXCLUDE_ARGS+=(--exclude-dir="$d"); done
+GREP_ARGS=(-rEIino "${INCLUDE[@]}" "${EXCLUDE_ARGS[@]}")
 
 # Mỗi tín hiệu: tên | regex. Có thêm mẫu cho JSX đã compile (jsx("form", createElement("form")
 # vì site React/Next chỉ lộ form trong file JS.
@@ -90,6 +91,34 @@ for entry in "${SIGNALS[@]}"; do
     echo "[không] $name"
   fi
 done
+
+# Tracking chạy ngay hay chờ đồng ý. Chỉ đọc code nên chỉ là dấu hiệu, không thay được việc mở trình duyệt kiểm tra.
+consent="none"
+if found TRACKING; then
+  # Thẻ <script src=tracker> viết thẳng trong HTML thì chạy ngay khi tải trang.
+  # Bỏ qua thẻ type="text/plain": cách các thư viện đồng ý dùng để chặn script tới khi người dùng bấm đồng ý.
+  static_hits="$(grep -rEIino --include='*.html' --include='*.htm' --include='*.php' --include='*.liquid' \
+      "${EXCLUDE_ARGS[@]}" \
+      -e '<script[^>]*src=["'"'"'][^"'"'"']*(googletagmanager\.com|google-analytics\.com|connect\.facebook\.net|analytics\.tiktok\.com|clarity\.ms|hotjar|cdn\.segment\.com)' \
+      "$DIR" 2>/dev/null | grep -viE 'type=["'"'"']text/plain' | awk '!seen[$0]++' | head -n 3)"
+  gate_hits="$(grep "${GREP_ARGS[@]}" -e "cookiebot|onetrust|cookieyes|cookie-script\.com|klaro|iubenda|osano|termly|complianz|cookieconsent|gtag\([\"']consent[\"']|ad_storage[\"']?:[[:space:]]*[\"']denied|data-cookieconsent|data-category=[\"'](analytics|marketing)|cookie[_-]?consent|consent[_-]?(given|granted|accepted)|đồng ý cookie|chấp nhận cookie" "$DIR" 2>/dev/null | awk '!seen[$0]++' | head -n 3)"
+  if [ -n "$static_hits" ]; then
+    consent="static"
+    echo "[có]    TRACKING_PRELOAD   (script theo dõi viết thẳng trong HTML, chạy ngay khi tải trang, trước khi người dùng đồng ý)"
+    echo "$static_hits" | sed "s#^$DIR/##" | cut -c1-160 | sed 's/^/          /'
+    if [ -n "$gate_hits" ]; then
+      echo "          Có thư viện/banner đồng ý (ví dụ $(echo "$gate_hits" | head -n1 | sed "s#^$DIR/##" | cut -c1-80))."
+      echo "          Một số thư viện tự chặn script (auto-blocking): mở trình duyệt kiểm tra trước khi kết luận."
+    fi
+  elif [ -n "$gate_hits" ]; then
+    consent="gated"
+    echo "[có]    CONSENT_GATE   (có dấu hiệu chỉ nạp tracking sau khi đồng ý; cần mở trình duyệt xác nhận, xem 01 mục C)"
+    echo "$gate_hits" | sed "s#^$DIR/##" | cut -c1-160 | sed 's/^/          /'
+  else
+    consent="unknown"
+    echo "[?]     CONSENT_GATE   (có tracking nhưng không thấy banner/cơ chế xin đồng ý; cần kiểm tra thủ công)"
+  fi
+fi
 
 # Nhận diện mobile app qua file đặc trưng của từng nền tảng
 platforms=""
@@ -150,4 +179,4 @@ if [ "$URL_MODE" = 1 ]; then
   echo "nên cần xem thêm trực tiếp trên trang, ví dụ có khung chat nào không."
 fi
 echo
-echo "LEVEL=$level AI=$ai FOREIGN_HOST=$host APP=$app"
+echo "LEVEL=$level AI=$ai FOREIGN_HOST=$host APP=$app TRACKING_CONSENT=$consent"

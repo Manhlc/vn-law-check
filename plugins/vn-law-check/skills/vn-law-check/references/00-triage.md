@@ -30,6 +30,13 @@ Chỉ hỏi ngược lại người dùng khi quét xong vẫn không xác đị
 
 Bất kể mức nào ở trên: nếu có chatbot AI hoặc nội dung AI-generated, luôn thêm `07-ai-transparency.md`. Chatbot nhận tin nhắn tự do của người dùng rồi gửi sang bên thứ ba (OpenAI, Anthropic...) thì tính tối thiểu mức 1, vì người dùng có thể gõ thông tin cá nhân vào.
 
+## Tracking chạy trước hay sau khi đồng ý
+
+Khi có TRACKING, `scan.sh` in thêm `TRACKING_CONSENT`:
+- `static`: script theo dõi viết thẳng trong HTML (`TRACKING_PRELOAD`), chạy ngay khi tải trang. Dấu hiệu khá chắc chắn cho mục 01-C 🔴, trừ khi site dùng thư viện đồng ý có chế độ tự chặn script (script sẽ in kèm ghi chú nếu thấy thư viện như vậy).
+- `gated`: có dấu hiệu chỉ nạp tracking sau khi đồng ý (thư viện quản lý đồng ý, Google Consent Mode, banner tự viết). Đây chỉ là dấu hiệu, không đủ để chấm 🟢: đọc code nạp script hoặc mở trình duyệt xem có request tới Google/Facebook trước khi bấm đồng ý không.
+- `unknown`: có tracking nhưng không thấy cơ chế xin đồng ý nào. Thường do tracking được nạp qua JS bundle hoặc Tag Manager; kiểm tra thủ công.
+
 ## Mobile app
 
 `scan.sh` tự nhận ra mobile app (Flutter, React Native, Expo, Android, iOS) qua `pubspec.yaml`, `package.json`, `AndroidManifest.xml`, `Info.plist`. Với app, script liệt kê thêm:
