@@ -42,14 +42,14 @@ Mức độ xếp như website. App xin quyền truy cập hoặc có SDK tracki
 
 ## Quy mô chủ site
 
-Site của hộ kinh doanh hoặc doanh nghiệp siêu nhỏ được miễn một phần nghĩa vụ dữ liệu cá nhân theo Điều 39 Luật 91/2025 (Điều 39 không nhắc tới cá nhân; site cá nhân có thuộc diện điều chỉnh hay không: CHƯA XÁC MINH):
+Site của hộ kinh doanh hoặc doanh nghiệp siêu nhỏ được miễn một phần nghĩa vụ dữ liệu cá nhân theo khoản 3 Điều 38 Luật 91/2025 (doanh nghiệp nhỏ, khởi nghiệp được hoãn 5 năm theo khoản 2; Điều 38 không nhắc tới cá nhân; site cá nhân có thuộc diện điều chỉnh hay không: CHƯA XÁC MINH):
 - miễn DPIA
 - miễn hồ sơ chuyển dữ liệu xuyên biên giới
 - miễn chỉ định nhân sự bảo vệ dữ liệu
 
 Không được miễn nếu xử lý dữ liệu nhạy cảm, xử lý số lượng lớn, hoặc kinh doanh dịch vụ xử lý dữ liệu. Xem đầu checklist 01.
 
-Đoán quy mô từ chính site (trang giới thiệu, footer, thông tin đăng ký kinh doanh). Không đoán được thì ghi rõ trong báo cáo là mục D, E checklist 01 "áp dụng nếu không thuộc diện miễn trừ Điều 39", thay vì dừng lại hỏi.
+Đoán quy mô từ chính site (trang giới thiệu, footer, thông tin đăng ký kinh doanh). Không đoán được thì ghi rõ trong báo cáo là mục D, E checklist 01 "áp dụng nếu không thuộc diện miễn trừ Điều 38", thay vì dừng lại hỏi.
 
 ## Cách báo cáo cho site mức 0-1
 

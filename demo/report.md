@@ -12,7 +12,7 @@
 - Lưu dữ liệu trên Firebase: `api/subscribe.js:5`
 - Host trên Vercel: `vercel.json`
 
-**Quy mô:** hộ kinh doanh (`index.html:59`) → được miễn một phần theo Điều 39 Luật 91/2025
+**Quy mô:** hộ kinh doanh (`index.html:59`) → được miễn một phần theo khoản 3 Điều 38 Luật 91/2025
 **Phạm vi:** 01 Dữ liệu cá nhân · 02 Thương mại điện tử · 04 Bảo vệ người tiêu dùng · 07 Minh bạch AI
 
 ## Tổng quan
@@ -90,7 +90,7 @@
 - Có hotline liên hệ (`index.html:60`).
 
 ## Miễn trừ áp dụng
-Footer ghi đây là hộ kinh doanh (`index.html:59`). Theo Điều 39 Luật 91/2025/QH15, site được miễn:
+Footer ghi đây là hộ kinh doanh (`index.html:59`). Theo khoản 3 Điều 38 Luật 91/2025/QH15, site được miễn:
 - đánh giá tác động xử lý dữ liệu (01-E)
 - hồ sơ chuyển dữ liệu xuyên biên giới (01-D), dù dữ liệu đang được gửi sang Firebase và OpenAI
 - chỉ định nhân sự bảo vệ dữ liệu (01-E)

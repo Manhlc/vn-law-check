@@ -11,9 +11,10 @@
 
 ## Miễn trừ cho đơn vị nhỏ (đọc trước khi audit mục D, E)
 
-Điều 39 Luật 91/2025 (nội dung theo bản tóm tắt, toàn văn CHƯA XÁC MINH):
-- Hộ kinh doanh và doanh nghiệp siêu nhỏ được miễn: đánh giá tác động xử lý dữ liệu (DPIA), hồ sơ chuyển dữ liệu xuyên biên giới, chỉ định bộ phận/nhân sự bảo vệ dữ liệu.
-- Doanh nghiệp nhỏ và doanh nghiệp khởi nghiệp sáng tạo được chọn chưa thực hiện các nghĩa vụ trên trong 5 năm.
+Điều 38 Luật 91/2025 (Điều 39 là quy định chuyển tiếp, không phải miễn trừ):
+- Khoản 3: hộ kinh doanh và doanh nghiệp siêu nhỏ không phải thực hiện Điều 21, Điều 22 và khoản 2 Điều 33, tức đánh giá tác động xử lý dữ liệu (DPIA), hồ sơ chuyển dữ liệu xuyên biên giới, chỉ định bộ phận/nhân sự bảo vệ dữ liệu.
+- Khoản 2: doanh nghiệp nhỏ và doanh nghiệp khởi nghiệp được chọn chưa thực hiện các nghĩa vụ trên trong 5 năm kể từ 01/01/2026.
+- Trường hợp không được miễn do Chính phủ quy định chi tiết (khoản 4 Điều 38, xem NĐ 356/2025).
 - Không được miễn nếu kinh doanh dịch vụ xử lý dữ liệu, xử lý dữ liệu nhạy cảm, hoặc xử lý dữ liệu số lượng lớn.
 
 → Với site của hộ kinh doanh, doanh nghiệp siêu nhỏ: mục D và E thường ⚪, trừ khi rơi vào các trường hợp không được miễn. Các mục A, B, C vẫn áp dụng.
