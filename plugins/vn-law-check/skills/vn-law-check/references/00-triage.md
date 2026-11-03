@@ -24,7 +24,7 @@ Chỉ hỏi ngược lại người dùng khi quét xong vẫn không xác đị
 | Mức | Đặc điểm | Checklist cần áp dụng |
 |---|---|---|
 | 0: Tĩnh hoàn toàn | Không form, không script theo dõi, không tài khoản, chỉ là trang giới thiệu/blog/CV/portfolio tĩnh | Không audit đầy đủ. Báo 1 dòng: "Site tĩnh, không phát sinh nghĩa vụ pháp lý đáng kể theo luật hiện hành. Có thể bỏ qua audit chi tiết, nhưng nên rà lại nếu sau này thêm form hoặc script theo dõi." |
-| 1: Thu thập nhẹ | Có form liên hệ/newsletter/bình luận, hoặc gắn analytics/pixel, nhưng không bán hàng | `01-personal-data-protection.md`, chỉ mục A, B, C (chính sách, consent, cookie). Bỏ qua mục D, E (chuyển dữ liệu xuyên biên giới, chỉ định DPO) trừ khi hosting nước ngoài và có lưu dữ liệu cá nhân thật sự. |
+| 1: Thu thập nhẹ | Có form liên hệ/newsletter/bình luận, hoặc gắn analytics/pixel, nhưng không bán hàng | `01-personal-data-protection.md`, chỉ mục A, B, C (chính sách, consent, cookie). Bỏ qua mục D, E (chuyển dữ liệu xuyên biên giới, DPIA, chỉ định DPO) trừ khi có lưu hoặc gửi dữ liệu cá nhân qua dịch vụ ở nước ngoài. |
 | 2: Bán hàng/TMĐT | Có giỏ hàng, thanh toán, bán sản phẩm/dịch vụ | `01` (đầy đủ) + `02-ecommerce.md` + `04-consumer-protection.md`. Thêm `05-advertising.md` nếu có quảng cáo/KOL, `06-electronic-transactions.md` nếu có hợp đồng điện tử. |
 | 3: Nền tảng/SaaS quy mô | Có tài khoản người dùng, xử lý dữ liệu lớn, hoặc là nền tảng cho bên thứ ba | Toàn bộ `01`-`08`. |
 
@@ -43,13 +43,15 @@ Mức độ xếp như website. App xin quyền truy cập hoặc có SDK tracki
 ## Quy mô chủ site
 
 Site của hộ kinh doanh hoặc doanh nghiệp siêu nhỏ được miễn một phần nghĩa vụ dữ liệu cá nhân theo khoản 3 Điều 38 Luật 91/2025 (doanh nghiệp nhỏ, khởi nghiệp được hoãn 5 năm theo khoản 2; Điều 38 không nhắc tới cá nhân; site cá nhân có thuộc diện điều chỉnh hay không: CHƯA XÁC MINH):
-- miễn DPIA
-- miễn hồ sơ chuyển dữ liệu xuyên biên giới
-- miễn chỉ định nhân sự bảo vệ dữ liệu
+- miễn lập hồ sơ đánh giá tác động xử lý dữ liệu (DPIA, Điều 21)
+- miễn cập nhật hồ sơ (Điều 22)
+- miễn chỉ định nhân sự bảo vệ dữ liệu (khoản 2 Điều 33)
+
+Không miễn hồ sơ chuyển dữ liệu xuyên biên giới (khoản 2 Điều 20): site dùng hosting, database, API ở nước ngoài vẫn phải xét mục D checklist 01.
 
 Không được miễn nếu xử lý dữ liệu nhạy cảm, xử lý số lượng lớn, hoặc kinh doanh dịch vụ xử lý dữ liệu. Xem đầu checklist 01.
 
-Đoán quy mô từ chính site (trang giới thiệu, footer, thông tin đăng ký kinh doanh). Không đoán được thì ghi rõ trong báo cáo là mục D, E checklist 01 "áp dụng nếu không thuộc diện miễn trừ Điều 38", thay vì dừng lại hỏi.
+Đoán quy mô từ chính site (trang giới thiệu, footer, thông tin đăng ký kinh doanh). Không đoán được thì ghi rõ trong báo cáo là mục D, E checklist 01 "mục E áp dụng nếu không thuộc diện miễn trừ khoản 3 Điều 38", thay vì dừng lại hỏi.
 
 ## Cách báo cáo cho site mức 0-1
 

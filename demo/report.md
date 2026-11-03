@@ -91,11 +91,12 @@
 
 ## Miễn trừ áp dụng
 Footer ghi đây là hộ kinh doanh (`index.html:59`). Theo khoản 3 Điều 38 Luật 91/2025/QH15, site được miễn:
-- đánh giá tác động xử lý dữ liệu (01-E)
-- hồ sơ chuyển dữ liệu xuyên biên giới (01-D), dù dữ liệu đang được gửi sang Firebase và OpenAI
-- chỉ định nhân sự bảo vệ dữ liệu (01-E)
+- lập và cập nhật hồ sơ đánh giá tác động xử lý dữ liệu (Điều 21, 22; 01-E)
+- chỉ định nhân sự bảo vệ dữ liệu (khoản 2 Điều 33; 01-E)
 
-Miễn trừ mất hiệu lực nếu shop xử lý dữ liệu nhạy cảm hoặc dữ liệu số lượng lớn. Miễn trừ cũng không bỏ được nghĩa vụ công khai và xin đồng ý ở các mục 1-4.
+**Không được miễn** hồ sơ đánh giá tác động chuyển dữ liệu xuyên biên giới (khoản 2 Điều 20; 01-D). Dữ liệu khách đang được gửi sang Firebase và OpenAI, nên shop cần xét xem có thuộc trường hợp miễn ở khoản 6 Điều 20 không; nếu không thì phải lập hồ sơ trong 60 ngày kể từ lần chuyển đầu tiên.
+
+Miễn trừ mất hiệu lực nếu shop xử lý dữ liệu nhạy cảm hoặc dữ liệu số lượng lớn. Shop đang gắn Google Analytics và Facebook Pixel; NĐ 356/2025 xếp dữ liệu theo dõi hành vi trực tuyến vào nhóm nhạy cảm, nên miễn trừ có thể không áp dụng. Điểm này chưa có hướng dẫn rõ, cần hỏi người làm luật. Miễn trừ cũng không bỏ được nghĩa vụ công khai và xin đồng ý ở các mục 1-4.
 
 ## Mức phạt tham khảo (cho các mục 🔴 về dữ liệu cá nhân)
 - Xử lý dữ liệu không có đồng ý (mục 3, 4): 30-50 triệu đồng (NĐ 330/2026/NĐ-CP).

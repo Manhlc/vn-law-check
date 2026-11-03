@@ -62,12 +62,12 @@ Dữ liệu được lưu trên [Firebase / máy chủ của ...] đặt tại [
 
 Chúng tôi lưu dữ liệu trong thời gian [ĐIỀN, ví dụ: tới khi bạn yêu cầu xóa hoặc [x] tháng sau giao dịch cuối], sau đó xóa hoặc khử nhận dạng, trừ khi pháp luật yêu cầu lưu lâu hơn.
 
-> Căn cứ: Điều 20 khoản 1 Luật 91/2025 (3 trường hợp chuyển xuyên biên giới, gồm dùng nền tảng đặt ngoài Việt Nam). Điều 14 khoản 1 điểm b: xóa khi đã hoàn thành mục đích. Chủ site còn phải lập hồ sơ đánh giá tác động chuyển dữ liệu (checklist 01-D), trừ khi được miễn theo khoản 3 Điều 38.
+> Căn cứ: Điều 20 khoản 1 Luật 91/2025 (3 trường hợp chuyển xuyên biên giới, gồm dùng nền tảng đặt ngoài Việt Nam). Điều 14 khoản 1 điểm b: xóa khi đã hoàn thành mục đích. Chủ site còn phải lập hồ sơ đánh giá tác động chuyển dữ liệu theo khoản 2 Điều 20 (checklist 01-D). Khoản 3 Điều 38 không miễn hồ sơ này cho hộ kinh doanh; chỉ miễn theo khoản 6 Điều 20.
 
 ## 6. Cookie và công cụ theo dõi
 
 Site dùng hai loại cookie:
-- **Cần thiết:** giữ giỏ hàng, đăng nhập. Luôn bật vì site không chạy được nếu thiếu.
+- **Cần thiết:** [chỉ liệt kê cookie thật sự có trong code, ví dụ giỏ hàng, phiên đăng nhập, lưu lựa chọn cookie]. Luôn bật vì site không chạy được nếu thiếu.
 - **Thống kê và quảng cáo:** [Google Analytics, Facebook Pixel]. Chỉ bật khi bạn bấm "Đồng ý" trên banner cookie.
 
 Bạn đổi lựa chọn bất cứ lúc nào qua nút "Cài đặt cookie" ở cuối trang.
@@ -85,12 +85,14 @@ Bạn có quyền:
 - ngừng nhận tin quảng cáo bất cứ lúc nào
 
 **Cách yêu cầu:** gửi email tới [ĐIỀN] hoặc [trang tài khoản / form yêu cầu]. Chúng tôi:
-- xác nhận đã nhận yêu cầu trong 2 ngày làm việc
-- cho xem, chỉnh sửa, cung cấp dữ liệu trong 10 ngày
-- xử lý yêu cầu rút đồng ý, hạn chế, phản đối trong 15 ngày
-- xóa dữ liệu trong 20 ngày
+- xác nhận đã nhận yêu cầu và hướng dẫn thủ tục trong 2 ngày làm việc
+- cho xem, chỉnh sửa, cung cấp dữ liệu trong 10 ngày (15 ngày nếu cần bên xử lý dữ liệu hoặc bên thứ ba cùng thực hiện)
+- xử lý yêu cầu rút đồng ý, hạn chế, phản đối trong 15 ngày (20 ngày nếu cần bên xử lý hoặc bên thứ ba ngừng xử lý)
+- xóa dữ liệu trong 20 ngày (30 ngày nếu cần bên xử lý hoặc bên thứ ba cùng xóa)
 
-> Căn cứ: Điều 4 khoản 1 Luật 91/2025 (danh sách quyền); Điều 10 (rút đồng ý); Điều 28 khoản 5 (ngừng nhận quảng cáo); Điều 5 NĐ 356/2025 (thời hạn).
+Yêu cầu phức tạp có thể được gia hạn một lần, chúng tôi sẽ báo lý do cho bạn.
+
+> Căn cứ: Điều 4 khoản 1 Luật 91/2025 (danh sách quyền); Điều 10 khoản 2 (rút đồng ý bằng văn bản, kể cả dạng điện tử); Điều 28 khoản 5 (ngừng nhận quảng cáo); Điều 5 khoản 2, 3, 4 NĐ 356/2025 (thời hạn; gia hạn 1 lần tối đa 15/10/20 ngày tương ứng). Không tự rút ngắn hay kéo dài các mốc này.
 
 ## 8. Trẻ em
 
@@ -102,9 +104,9 @@ Với người dùng là trẻ em, cha mẹ hoặc người đại diện theo p
 
 ## 9. Khi có sự cố
 
-Nếu xảy ra lộ, mất dữ liệu cá nhân, chúng tôi thông báo cho cơ quan chuyên trách bảo vệ dữ liệu cá nhân theo quy định và thông báo tới bạn nếu sự cố ảnh hưởng tới bạn.
+Nếu xảy ra lộ, mất dữ liệu cá nhân, chúng tôi thông báo cho cơ quan chuyên trách bảo vệ dữ liệu cá nhân theo quy định. [KIỂM TRA: có cam kết báo cho người dùng bị ảnh hưởng không? Chỉ giữ câu này nếu chủ site làm được: "Chúng tôi cũng báo cho bạn nếu sự cố ảnh hưởng tới dữ liệu của bạn."]
 
-> Căn cứ: Điều 23 khoản 1 Luật 91/2025 (thông báo cơ quan chuyên trách chậm nhất 72 giờ). Không hứa thời hạn thông báo người dùng nếu chủ site chưa có quy trình.
+> Căn cứ: Điều 23 khoản 1 Luật 91/2025: thông báo cơ quan chuyên trách chậm nhất 72 giờ kể từ khi phát hiện. Khoản này không bắt buộc báo cho người dùng, nên việc báo người dùng là cam kết tự nguyện của chủ site.
 
 ## 10. Thay đổi chính sách
 

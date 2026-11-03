@@ -81,7 +81,9 @@ Chưa có chính sách bảo mật, hoặc có mà copy từ đâu đó? Bảo t
 soạn chính sách bảo mật cho dự án này
 ```
 
-Agent lấy đúng những dữ liệu site đang thu, những dịch vụ bên thứ ba đang gọi (Google Analytics, Firebase, OpenAI...) từ code để viết chính sách, rồi sửa luôn form đồng ý và banner cookie. Thông tin nó không tìm được trong code như tên đơn vị, mã số thuế thì để trống cho bạn điền, không tự bịa. Kết quả là bản nháp, nên nhờ người làm luật xem lại trước khi đăng.
+Agent soạn một **bản nháp** dựa trên code của bạn: site đang thu dữ liệu gì, gửi cho dịch vụ nào (Google Analytics, Firebase, OpenAI...), rồi gợi ý sửa form đồng ý và banner cookie. Thông tin không tìm được trong code như tên đơn vị, mã số thuế thì để trống cho bạn điền.
+
+Repo chỉ hướng dẫn agent làm, không đảm bảo kết quả đúng luật 100%. Bản nháp giúp bạn biết chính sách cần có những gì. Muốn chắc chắn thì nhờ người làm luật xem trước khi đăng.
 
 ## Hỏi nhanh
 
